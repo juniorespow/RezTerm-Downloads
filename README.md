@@ -47,7 +47,8 @@ O software instala seus binários isolados no diretório do usuário (`%LocalApp
 
 * **🗺️ MTR Traceroute Avançado**: O motor mais preciso do mercado, com cálculo dinâmico por salto de *Jitter*, Desvio Padrão e gráficos animadíssimos em tempo real.
 * **🔐 Cofre SSH MobaVault**: Armazenamento criptografado via **AES-256-GCM** amarrado à sessão do usuário (*Windows DPAPI Anti-Memory Scraper*), com derivação **PBKDF2 SHA-256** para exportação e auto-login inteligente na Conexão Rápida.
-* **🌌 Design Dual Cyberpunk & Clean**: Alternância instantânea de temas com barra lateral retrátil fluida para foco total nas telas pretas de terminal.
+* **🌌 Design 100% Dark Cyberpunk (Neon Blue)**: Ditadura visual do modo escuro absoluto vibrando em Ciano Ciber (`#00f0ff`) com barra lateral retrátil fluida e monitor ISP Dual Stack (IPv4/IPv6).
+* **🧮 NetOps & IRR Whois Enterprise**: Motor de busca avançada para ASN, IP e Prefixos CIDR com extração automática de Razão Social completa do titular (`fn` vCard) e execução assíncrona concorrente à prova de timeouts.
 * **📡 Advanced IP & Service Scanner 2.0**: Varredura multi-protocolo assíncrona com sondagem TCP paralela de portas (HTTP, HTTPS, SSH, RDP, SMB), raspagem automática de títulos HTML/Banners de equipamentos (ex: *Ubiquiti airOS*, *MikroTik RouterOS*, *HP LaserJet*), decodificação IEEE de fabricante MAC e botões de atalho de 1 clique direto para o navegador e terminal!
 
 ---
