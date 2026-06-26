@@ -32,7 +32,7 @@ Acesse a barra lateral direita na seção [**Releases**](https://github.com/juni
 * 📦 **`RezTermSetup.exe`** (Validador e Bootstrapper Nativo)
 
 ### 2. Validação Diagnóstica Inteligente
-Ao executar o `RezTermSetup.exe`, o nosso assistente cibernético realiza inspeções instantâneas no seu sistema operacional antes de concluir a instalação:
+Ao executar o `RezTermSetup.exe`, o assistente realiza inspeções instantâneas no seu sistema operacional antes de concluir a instalação:
 * ✔️ **Arquitetura x64**: Confirmação nativa de compatibilidade com instruções de 64 bits.
 * ✔️ **Espaço em Disco**: Verificação de alocação segura no volume principal (`C:\`).
 * ✔️ **Runtime de UI**: Checagem de disponibilidade do motor *Microsoft Edge WebView2*.
