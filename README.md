@@ -31,15 +31,15 @@ Em alinhamento às nossas diretrizes de **Segurança Militar e Proteção de Pro
 Acesse a barra lateral direita na seção [**Releases**](https://github.com/juniorespow/RezTerm-Downloads/releases) e baixe o arquivo oficial:
 * 📦 **`RezTermSetup.exe`** (Validador e Bootstrapper Nativo)
 
-### 2. Validação Diagnóstica Inteligente
-Ao executar o `RezTermSetup.exe`, o assistente realiza inspeções instantâneas no seu sistema operacional antes de concluir a instalação:
-* ✔️ **Arquitetura x64**: Confirmação nativa de compatibilidade com instruções de 64 bits.
-* ✔️ **Espaço em Disco**: Verificação de alocação segura no volume principal (`C:\`).
-* ✔️ **Runtime de UI**: Checagem de disponibilidade do motor *Microsoft Edge WebView2*.
-* ✔️ **Conectividade**: Teste assíncrono de comunicação com os nós de atualização.
+### 2. Validação Diagnóstica Inteligente & Escolha de Pasta
+Ao executar o `RezTermSetup.exe`, o assistente realiza inspeções instantâneas no seu sistema operacional e permite personalização completa:
+* 📁 **Seletor de Pasta Personalizada**: Opção nativa para o usuário escolher exatamente onde o sistema será instalado (padrão em `%LocalAppData%\RezTerm`).
+* ✔️ **Arquitetura x64 & Espaço**: Checagem de compatibilidade com instruções 64 bits e alocação segura em disco.
+* ✔️ **Runtime de UI Isolado**: Checagem de disponibilidade do motor *Microsoft Edge WebView2* com criação automática de cache isolado anti-travamento.
+* ✔️ **Pacote Completo (Web Assets)**: Extração integral dos arquivos `.exe` e da pasta web `wwwroot`, eliminando telas pretas e erros de navegação.
 
-### 3. Conclusão Silenciosa
-O software instala seus binários isolados no diretório do usuário (`%LocalAppData%\RezTerm`), cria atalhos otimizados na Área de Trabalho e inicializa instantaneamente sem exigir privilégios administrativos (*Elevation / UAC*) no computador host.
+### 3. Conclusão Silenciosa & Atalho Nativo
+O software instala seus binários isolados, cria um atalho nativo `.lnk` na Área de Trabalho com o diretório de trabalho (*WorkingDirectory*) travado na pasta raiz e inicializa instantaneamente sem exigir privilégios administrativos (*Elevation / UAC*).
 
 ---
 
