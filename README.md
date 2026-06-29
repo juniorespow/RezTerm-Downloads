@@ -34,17 +34,20 @@ Acesse a barra lateral direita na seção [**Releases**](https://github.com/juni
 ### 2. Validação Diagnóstica Inteligente & Escolha de Pasta
 Ao executar o `RezTermSetup.exe`, o assistente realiza inspeções instantâneas no seu sistema operacional e permite personalização completa:
 * 📁 **Seletor de Pasta Personalizada**: Opção nativa para o usuário escolher exatamente onde o sistema será instalado (padrão em `%LocalAppData%\RezTerm`).
+* 📌 **Atalhos Inteligentes**: Criação de ícones de acesso tanto na **Área de Trabalho** quanto no **Menu Iniciar** do Windows.
+* 🗑️ **Desinstalador Completo**: Opção integrada de desinstalação total para limpeza profunda de binários, cache e atalhos sem deixar resíduos no sistema.
 * ✔️ **Arquitetura x64 & Espaço**: Checagem de compatibilidade com instruções 64 bits e alocação segura em disco.
 * ✔️ **Runtime de UI Isolado**: Checagem de disponibilidade do motor *Microsoft Edge WebView2* com criação automática de cache isolado anti-travamento.
 * ✔️ **Pacote Completo (Web Assets)**: Extração integral dos arquivos `.exe` e da pasta web `wwwroot`, eliminando telas pretas e erros de navegação.
 
 ### 3. Conclusão Silenciosa & Atalho Nativo
-O software instala seus binários isolados, cria um atalho nativo `.lnk` na Área de Trabalho com o diretório de trabalho (*WorkingDirectory*) travado na pasta raiz e inicializa instantaneamente sem exigir privilégios administrativos (*Elevation / UAC*).
+O software instala seus binários isolados, cria atalhos nativos `.lnk` com o diretório de trabalho (*WorkingDirectory*) travado na pasta raiz e inicializa instantaneamente sem exigir privilégios administrativos (*Elevation / UAC*).
 
 ---
 
 ## 🛡️ Destaques da Plataforma RezTerm
 
+* **⚡ Live TCP/UDP Watcher (DPI Leve & GeoIP)**: Monitor de tráfego de rede em tempo real com motor orientado a eventos sem travamento de interface! Detecta conexões **TCP/UDP**, identifica protocolos modernos como **HTTP/3 QUIC** e rastrea diagnósticos **ICMP** (Ping/Traceroute) com resolução geográfica offline instantânea (Bandeira do País, Cidade e Provedor/ASN) via bases *MaxMind GeoLite2 MemoryMappedFile*.
 * **🗺️ MTR Traceroute Avançado**: O motor mais preciso do mercado, com cálculo dinâmico por salto de *Jitter*, Desvio Padrão e gráficos animadíssimos em tempo real.
 * **🔐 Cofre SSH MobaVault**: Armazenamento criptografado via **AES-256-GCM** amarrado à sessão do usuário (*Windows DPAPI Anti-Memory Scraper*), com derivação **PBKDF2 SHA-256** para exportação e auto-login inteligente na Conexão Rápida.
 * **🌌 Design 100% Dark Cyberpunk (Neon Blue)**: Ditadura visual do modo escuro absoluto vibrando em Ciano Ciber (`#00f0ff`) com barra lateral retrátil fluida e monitor ISP Dual Stack (IPv4/IPv6).
