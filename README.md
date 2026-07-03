@@ -1,4 +1,4 @@
-# ⚡ RezTerm v2.0+ (Cyberpunk SOC/NOC Suite)
+# ⚡ RezTerm v2.0.4 (Cyberpunk SOC/NOC Suite)
 
 <div align="center">
 
@@ -19,22 +19,22 @@ Desenvolvida por **Reginaldo Junior (Razon)** combinando a performance nativa do
 O **RezTerm** foi projetado para longas jornadas de operação cibernética em ambientes críticos (Datacenters, ISPs, provedores de telecom e salas de controle NOC/SOC):
 * **Ditadura do Tema Dark**: Superfícies profundas (`#0D1117`), cards estruturados (`#161B22`) e bordas de alta precisão (`#30363D`), eliminando a fadiga ocular.
 * **Acentos em Ciano Neon (`#00f0ff`)**: Toda interatividade visual, radares, gráficos interativos, badges de protocolo e botões ativos utilizam a luminescência azul neon para leitura imediata e feedback tátil.
-* **Renderização DWM Nativa**: A janela do sistema é blindada contra travamentos e integra renderização escura na própria barra de título do Windows 11/10 (`DwmSetWindowAttribute`).
+* **Responsividade Absoluta**: Design fluido com rolagem inteligente e containers auto-adaptáveis, perfeito tanto para workstations multimonitor quanto para notebooks em campo com telas de 14".
 
 ---
 
-## 🛠️ 2. Suíte de Ferramentas Integradas
+## 🛠️ 2. Suíte de Ferramentas Integradas (v2.0.4)
 
 | Módulo | Descrição Principal | Destaques de Engenharia |
 | :--- | :--- | :--- |
-| **📊 Dashboard & Latência** | Monitoramento em tempo real da saúde da conexão e dual-stack ISP. | Gráficos de latência em tempo real, detecção de perda de pacotes e status de pilha nativa. |
-| **💻 Terminal SSH Studio** | Client SSH multi-aba de alta performance com `xterm.js`. | Cofre de senhas criptografado DPAPI + HMAC-SHA256, barra de snippets rápidos e SFTP integrado. |
-| **🏓 Ping & Trace Suite** | Motores avançados de ICMP, Ping Contínuo e MTR visual. | **Seletor de Pilha IP (IPv4/IPv6/Auto)** com filtragem estrita por família DNS e **Cálculo de Jitter de Destino** isolado no MTR. |
+| **📊 Dashboard & Latência** | Monitoramento em tempo real da saúde da conexão e dual-stack ISP. | Gráficos de latência ao vivo, detecção de perda de pacotes e **Gateway Dual (exibição simultânea de saídas IPv4 e IPv6 Neon)**. |
+| **💻 Terminal SSH Studio** | Client SSH multi-aba de alta performance com `xterm.js`. | **Sincronização Dinâmica SIGWINCH** (gradação de colunas/linhas em tempo real perfeita para `htop`/`btop`), **Syntax Highlighting** (Cisco & Datacom com `deny` em vermelho crítico), **Copiar Tudo (Buffer SSH)** preservando identação estilo MobaXterm e **12 Fabricantes suportados** com grupos colapsáveis `[+/-]`. |
+| **🏓 Ping & Trace Suite** | Motores avançados de ICMP, Ping Contínuo, Cadeia Multi-Ping e MTR. | **Cadeia Multi-Ping** com laudo formatado, **Seletor de Pilha IP (IPv4/IPv6/Auto)** e **Cálculo de Jitter de Destino** isolado no MTR. |
 | **📡 IP Scan & APIPA** | Varredura minuciosa de sub-redes locais com ARP/Ping/TCP Sweep. | **Resgate APIPA (RFC 3927)** para resgate de switches e roteadores sem servidor DHCP ativo. |
 | **⚡ Live TCP/UDP Watcher** | Monitoramento de sockets abertos e conexões ativas no Windows. | Integração nativa com **GeoLite2 MMDB em Memória (MMF)** projetando conexões em **Mapa Mundi interativo**. |
 | **🌐 NetOps & Whois/IRR** | Consulta unificada a bases mundiais de registro de IPs e ASNs. | Conectores diretos para RADB, RIPE, LACNIC, ARIN, APNIC e AFRINIC com formatação de blocos BGP. |
 | **🔌 Ethernet Tests L2** | Verdadeiro "Fluke de Software" operando na Camada de Enlace (L2). | Escuta passiva LLDP/CDP/MNDP, injeção ativa de **PADI Broadcast (PPPoE Rogue)** e **DHCP Discover**. |
-| **📶 Wireless Tests RF** | Analisador de espectro Wi-Fi e qualidade de sinal em tempo real. | Gráficos de sinal de redes vizinhas 2.4 GHz, 5 GHz e 6 GHz (Wi-Fi 6E/7) com cálculo de SNR. |
+| **📶 Wireless Tests RF** | Analisador de espectro Wi-Fi e qualidade de sinal em tempo real. | **Barras de progresso ao vivo**, **Telemetria Ativa Gateway RF de partida instantânea**, pílulas neon de redes sobrepostas e auditoria IEEE 802.11. |
 | **🕵️ Rastreio Forense CGNAT** | Investigação forense em servidores Graylog com geração de relatórios. | Exportação nativa em PDF e TXT com cláusulas jurídicas obrigatórias (Marco Civil da Internet e LGPD). |
 
 ---
