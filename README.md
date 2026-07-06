@@ -26,8 +26,8 @@ O acesso é estritamente restrito e exige autenticação de licença vinculada a
 A distribuição do **RezTerm** é realizada via assistente de instalação blindado que configura o ambiente no perfil do técnico sem exigir privilégios de administrador global (`%LocalAppData%\RezTerm`):
 
 1. **Baixe o Instalador Oficial**: Acesse a aba [Releases](https://github.com/juniorespow/RezTerm-Downloads/releases/latest) deste repositório e faça o download do arquivo **`RezTermSetup.exe`**.
-2. **Execute o Assistente**: Abra o `RezTermSetup.exe`. Ele baixará automaticamente o payload blindado e criará os atalhos na Área de Trabalho e Menu Iniciar com o novo ícone Cyberpunk Neon.
-3. **Atualização Automática via CDN**: O software possui verificação contínua de novas versões em segundo plano. Sempre que a Diretoria Telecom lançar um patch de segurança ou nova ferramenta, você será notificado no topo do sistema para atualizar em 1 clique.
+2. **Execute o Assistente**: Abra o `RezTermSetup.exe`. Ele baixará automaticamente o payload blindado e criará os atalhos na Área de Trabalho e Menu Iniciar.
+3. **Atualização Automática via CDN**: O software possui verificação contínua de novas versões em segundo plano. Sempre que for lançado um patch de segurança ou nova ferramenta, você será notificado no topo do sistema para realizar a atualização.
 
 ---
 
