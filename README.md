@@ -1,4 +1,4 @@
-# ⚡ RezTerm v2.0.4 (Cyberpunk SOC/NOC Suite)
+# ⚡ RezTerm v2.0.6 (Cyberpunk SOC/NOC Suite - Telecom Edition)
 
 <div align="center">
 
@@ -11,19 +11,38 @@
 **A Suíte Definitiva de Engenharia de Redes, Diagnóstico SOC/NOC, Auditoria Forense e Terminal SSH Multi-Aba.**  
 Desenvolvida por **Reginaldo Junior (Razon)** combinando a performance nativa do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface ultramoderna Blazor Hybrid em estética **Cyberpunk Dark Neon**.
 
+---
+
+### 🚨 AVISO DE LICENCIAMENTO E PROPRIEDADE INTELECTUAL
+**O RezTerm é um software proprietário corporativo da Diretoria Telecom.**  
+O acesso é estritamente restrito e exige autenticação de licença vinculada ao hardware deste computador (HWID). O download ou tentativa de uso não autorizado sem chave criptográfica válida é monitorado e bloqueado pela arquitetura de segurança do sistema.
+
 </div>
 
 ---
 
-## 🌌 1. Identidade Visual Cyberpunk Dark Neon
-O **RezTerm** foi projetado para longas jornadas de operação cibernética em ambientes críticos (Datacenters, ISPs, provedores de telecom e salas de controle NOC/SOC):
-* **Ditadura do Tema Dark**: Superfícies profundas (`#0D1117`), cards estruturados (`#161B22`) e bordas de alta precisão (`#30363D`), eliminando a fadiga ocular.
-* **Acentos em Ciano Neon (`#00f0ff`)**: Toda interatividade visual, radares, gráficos interativos, badges de protocolo e botões ativos utilizam a luminescência azul neon para leitura imediata e feedback tátil.
-* **Responsividade Absoluta**: Design fluido com rolagem inteligente e containers auto-adaptáveis, perfeito tanto para workstations multimonitor quanto para notebooks em campo com telas de 14".
+## 📥 1. Como Baixar e Instalar (Release v2.0.6)
+
+A distribuição do **RezTerm** é realizada via assistente de instalação blindado que configura o ambiente no perfil do técnico sem exigir privilégios de administrador global (`%LocalAppData%\RezTerm`):
+
+1. **Baixe o Instalador Oficial**: Acesse a aba [Releases](https://github.com/juniorespow/RezTerm-Downloads/releases/latest) deste repositório e faça o download do arquivo **`RezTermSetup.exe`**.
+2. **Execute o Assistente**: Abra o `RezTermSetup.exe`. Ele baixará automaticamente o payload blindado e criará os atalhos na Área de Trabalho e Menu Iniciar com o novo ícone Cyberpunk Neon.
+3. **Atualização Automática via CDN**: O software possui verificação contínua de novas versões em segundo plano. Sempre que a Diretoria Telecom lançar um patch de segurança ou nova ferramenta, você será notificado no topo do sistema para atualizar em 1 clique.
 
 ---
 
-## 🛠️ 2. Suíte de Ferramentas Integradas (v2.0.4)
+## 🔑 2. Como Ativar sua Licença Corporativa (HWID)
+
+Na primeira execução do **RezTerm v2.0.6**, o sistema iniciará em **Tela Cheia Maximizada** apresentando a tela modal de bloqueio de segurança:
+
+1. **Copie seu Código Único (HWID)**: Clique no botão **`[ Copiar meu HWID e Solicitar Licença ]`**. O sistema gerará um hash de 12 caracteres único da sua placa-mãe e processador (ex: `REZ-8F9A-2B1C-4D5E`).
+2. **Envie para a Diretoria Telecom**: Abra chamado ou envie uma mensagem direta ao gestor responsável informando seu Nome, Setor e o código HWID copiado.
+3. **Ative o Sistema**: A Diretoria emitirá uma chave criptográfica **HMAC-SHA256** (ex: `REZ-PRO-20270706-XXXX-XXXX-XXXX-SIG16`). Cole essa string no campo da tela de bloqueio e clique em **Ativar e Desbloquear Sistema**.
+4. **Verificação de Validade**: Após desbloqueado, o status de sua licença ficará sempre visível no topo do Dashboard através do selo verde `🔒 Licenciado (...)`. Ao clicar no selo, você poderá consultar todos os detalhes da sua concessão corporativa.
+
+---
+
+## 🛠️ 3. Suíte de Ferramentas Integradas (v2.0.6)
 
 | Módulo | Descrição Principal | Destaques de Engenharia |
 | :--- | :--- | :--- |
@@ -35,60 +54,22 @@ O **RezTerm** foi projetado para longas jornadas de operação cibernética em a
 | **🌐 NetOps & Whois/IRR** | Consulta unificada a bases mundiais de registro de IPs e ASNs. | Conectores diretos para RADB, RIPE, LACNIC, ARIN, APNIC e AFRINIC com formatação de blocos BGP. |
 | **🔌 Ethernet Tests L2** | Verdadeiro "Fluke de Software" operando na Camada de Enlace (L2). | Escuta passiva LLDP/CDP/MNDP, injeção ativa de **PADI Broadcast (PPPoE Rogue)** e **DHCP Discover**. |
 | **📶 Wireless Tests RF** | Analisador de espectro Wi-Fi e qualidade de sinal em tempo real. | **Barras de progresso ao vivo**, **Telemetria Ativa Gateway RF de partida instantânea**, pílulas neon de redes sobrepostas e auditoria IEEE 802.11. |
-| **🕵️ Rastreio Forense CGNAT** | Investigação forense em servidores Graylog com geração de relatórios. | Exportação nativa em PDF e TXT com cláusulas jurídicas obrigatórias (Marco Civil da Internet e LGPD). |
-
----
-
-## 🕵️ 3. Módulo Forense & Rastreio CGNAT (Graylog)
-
-O **RezTerm** integra um motor de busca forense desenvolvido especificamente para analistas de segurança investigarem conexões criminosas ou incidentes cibernéticos através de logs de CGNAT centralizados em clusters **Graylog**.
-
-### 📋 Passo a Passo: Como Configurar o Graylog no RezTerm
-
-1. **Acessar o Módulo**: No menu lateral esquerdão do RezTerm, clique na aba **"🕵️ Graylog (CGNAT Forense)"**.
-2. **Gerenciamento de Servidores**: No topo da tela, clique no botão **"⚙️ Gerenciar Servidores Graylog"**.
-3. **Cadastrar Novo Cluster**: Clique em **"➕ Novo Servidor"** e preencha os parâmetros do nó Graylog:
-   * **Nome Identificador**: Ex: `Cluster Graylog - Core Datacenter SP`.
-   * **Hostname ou IP**: Ex: `graylog.provedor.intranet` ou `10.10.50.15`.
-   * **Porta REST API**: Padrão `9000` (ou `443` se estiver atrás de reverse proxy HTTPS).
-   * **API Key / Token**: Gere uma API Key com permissão de leitura (`read:messages`) no painel web do Graylog (*System -> Users -> Create API Token*) e cole no RezTerm. A chave será armazenada de forma criptografada pelo sistema.
-   * **Compatibilidade de Versão**: Selecione o motor correspondente ao seu parque:
-     * `v4.x Legado`: Para servidores Graylog nas séries 4.0, 4.1 e 4.2.
-     * `v5.x Moderno`: Para versões Graylog 5.0+ e Opensearch 2.x.
-4. **Testar & Ativar**: Clique em **Salvar**. O RezTerm validará a conectividade. Se bem-sucedido, selecione o servidor na lista para iniciar as investigações.
-
-### 🔍 Executando Rastreios Forenses com Conformidade Jurídica
-* **Busca Cirúrgica por IP/Porta**: Informe o IP Público, Porta de Origem (opcional) e a Data/Hora exata do fato. O motor compõe automaticamente a query Lucene estrita (`nf_proto: "6" AND nf_xlate_src_addr_ipv4: "..." AND nf_postnatportblockstart: "..."`).
-* **Extração Jurídica (PDF & TXT)**: Ao clicar em **"📄 Exportar Laudo Forense PDF"** ou **"📋 Exportar TXT"**, o sistema abre a janela de escolha de pastas do Windows (`SaveFileDialog`) e gera um laudo forense profissional contendo:
-  * Cabeçalho institucional do provedor/empresa e dados do analista responsável.
-  * **Cláusula de Conformidade com o Marco Civil da Internet (Lei nº 12.965/2014 - Art. 15)** justificando a preservação e extração legal de dados de conexão.
-  * **Cláusula de Proteção de Dados (LGPD - Lei nº 13.709/2018 - Art. 7º, VI e IX)** assegurando o tratamento para exercício regular de direitos em processo judicial ou legítimo interesse na segurança da rede.
-  * **Hash Criptográfico de Integridade (SHA-256)** gerado a partir do conteúdo exato dos logs extraídos para blindagem probatória em tribunais.
+| **🕵️ Rastreio Forense CGNAT** | Investigação forense em servidores Graylog com geração de relatórios. | **Modo Híbrido Bimodal (Assistente HelpDesk N1/N2 + Modo Engenharia Avançado)**, cálculo de blocos **Cisco BPA (RFC 6598)** em memória C#, e exportação nativa em PDF e TXT com cláusulas jurídicas obrigatórias (Marco Civil da Internet e LGPD). |
 
 ---
 
 ## 🛡️ 4. Arquitetura de Segurança & Blindagem
 
-O RezTerm adota uma postura de segurança defensiva (*Security by Design*) em cada camada de software:
-
 1. **Compilação Blindada (*Single-File ReadyToRun Native*)**:
-   - Os executáveis de distribuição (`SepulnationTerm.exe` e `RezTermSetup.exe`) são compilados no modo `PublishSingleFile` + `PublishReadyToRun`, gerando instruções de máquina pré-compiladas nativas (`win-x64`) com desativação total de símbolos de debug (`DebugSymbols=false`), dificultando ataques de engenharia reversa e decompilação via ILSpy/dnSpy.
+   - Os executáveis são compilados em código de máquina nativo (`win-x64`) com desativação total de símbolos de debug (`DebugSymbols=false`), impedindo ataques de engenharia reversa via ILSpy/dnSpy.
 2. **Cofre Criptográfico DPAPI + HMAC-SHA256 (`HostStorageService`)**:
-   - Nenhuma senha de roteador, chave privada SSH ou token de API Graylog é gravada em texto plano.
-   - O sistema utiliza a **DPAPI (Data Protection API) do Windows** acoplada à conta do usuário de domínio em execução (`DataProtectionScope.CurrentUser`), reforçada com um código de autenticação de mensagem hash **HMAC-SHA256** para prevenir adulterações de arquivo no diretório local.
-3. **Observabilidade Blindada com Mascaramento (`RezLogger.cs`)**:
-   - Sistema de logging estruturado em JSON Lines (`.jsonl`) rotativo com expurgo automático após 14 dias.
-   - Antes de persistir qualquer exceção ou evento de auditoria no disco local, o logger executa varredura profunda de mascaramento (*Data Masking*), substituindo automaticamente senhas, tokens e chaves por `"***MASKED***"`.
-
----
-
-## 🚀 5. Instalação & Atualizações CDN Automáticas
-
-O RezTerm possui um assistente bootstrapper nativo (`RezTermSetup.exe`) que garante a instalação limpa, sem dependências externas de administração, diretamente no perfil do técnico (`%LocalAppData%\RezTerm`):
-* **Sincronização de Cache de Ícone**: O instalador força a atualização do cache gráfico do Shell do Windows (`SHChangeNotify`) garantindo que o novo ícone Cyberpunk seja exibido imediatamente na barra de tarefas e área de trabalho.
-* **Auto-Updater via GitHub CDN**: Ao abrir a ferramenta, o serviço `UpdateService` consulta anonimamente a API pública de lançamentos (`juniorespow/RezTerm-Downloads`). Caso uma nova versão esteja disponível, o analista recebe um alerta no topo da tela podendo baixar e aplicar a atualização em 1 clique sem interromper suas sessões.
+   - Nenhuma senha, chave privada SSH, token de API Graylog ou chave de licença é gravada em texto plano no disco.
+   - O sistema utiliza a **DPAPI (Data Protection API) do Windows** acoplada ao perfil do usuário (`DataProtectionScope.CurrentUser`) e reforçada com verificação de integridade **HMAC-SHA256**.
+3. **Observabilidade com Mascaramento de Dados**:
+   - Logs estruturados em JSON Lines (`.jsonl`) rotativos, que executam mascaramento automático de credenciais (*Data Masking*), substituindo senhas e tokens por `"***MASKED***"`.
 
 ---
 <div align="center">
-<b>RezTerm SOC/NOC Suite</b> • Engenharia Cibernética de Alta Performance • Reginaldo Junior (Razon)
+<b>Sepulnation Telecom • Diretoria de Engenharia & Segurança Cibernética</b><br>
+<i>Reginaldo Junior (Razon) • Todos os Direitos Reservados</i>
 </div>
