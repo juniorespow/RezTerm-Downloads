@@ -14,7 +14,7 @@ Desenvolvida por **Reginaldo Junior (Razon)** combinando a performance nativa do
 ---
 
 ### 🚨 AVISO DE LICENCIAMENTO E PROPRIEDADE INTELECTUAL
-**O RezTerm é um software proprietário corporativo da Diretoria Telecom.**  
+**O RezTerm é um software proprietário.**  
 O acesso é estritamente restrito e exige autenticação de licença vinculada ao hardware deste computador (HWID). O download ou tentativa de uso não autorizado sem chave criptográfica válida é monitorado e bloqueado pela arquitetura de segurança do sistema.
 
 </div>
@@ -33,11 +33,11 @@ A distribuição do **RezTerm** é realizada via assistente de instalação blin
 
 ## 🔑 2. Como Ativar sua Licença Corporativa (HWID)
 
-Na primeira execução do **RezTerm v2.0.6**, o sistema iniciará em **Tela Cheia Maximizada** apresentando a tela modal de bloqueio de segurança:
+Na primeira execução do **RezTerm v2.0.6**, o sistema iniciará apresentando a tela modal de bloqueio de segurança:
 
 1. **Copie seu Código Único (HWID)**: Clique no botão **`[ Copiar meu HWID e Solicitar Licença ]`**. O sistema gerará um hash de 12 caracteres único da sua placa-mãe e processador (ex: `REZ-8F9A-2B1C-4D5E`).
-2. **Envie para a Diretoria Telecom**: Abra chamado ou envie uma mensagem direta ao gestor responsável informando seu Nome, Setor e o código HWID copiado.
-3. **Ative o Sistema**: A Diretoria emitirá uma chave criptográfica **HMAC-SHA256** (ex: `REZ-PRO-20270706-XXXX-XXXX-XXXX-SIG16`). Cole essa string no campo da tela de bloqueio e clique em **Ativar e Desbloquear Sistema**.
+2. **Envie para a time de TI**: Abra chamado ou envie uma mensagem direta ao gestor responsável informando seu Nome, Setor e o código HWID copiado.
+3. **Ative o Sistema**: O time responsável emitirá uma chave criptográfica **HMAC-SHA256** (ex: `REZ-PRO-20270706-XXXX-XXXX-XXXX-SIG16`). Cole essa string no campo da tela de bloqueio e clique em **Ativar e Desbloquear Sistema**.
 4. **Verificação de Validade**: Após desbloqueado, o status de sua licença ficará sempre visível no topo do Dashboard através do selo verde `🔒 Licenciado (...)`. Ao clicar no selo, você poderá consultar todos os detalhes da sua concessão corporativa.
 
 ---
