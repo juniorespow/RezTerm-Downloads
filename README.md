@@ -1,4 +1,4 @@
-# ⚡ RezTerm v2.0.7 (Cyberpunk SOC/NOC Suite - Telecom Edition)
+# ⚡ RezTerm v2.0.8 (Cyberpunk SOC/NOC Suite - Telecom Edition)
 
 <div align="center">
 
@@ -22,7 +22,7 @@ O acesso é estritamente restrito e exige autenticação de licença vinculada a
 
 ---
 
-## 📥 1. Como Baixar e Instalar (Release v2.0.7)
+## 📥 1. Como Baixar e Instalar (Release v2.0.8)
 
 A distribuição do **RezTerm** é realizada via assistente de instalação blindado que configura o ambiente no perfil do técnico sem exigir privilégios de administrador global (`%LocalAppData%\RezTerm`):
 
@@ -34,7 +34,7 @@ A distribuição do **RezTerm** é realizada via assistente de instalação blin
 
 ## 🔑 2. Como Ativar sua Licença Corporativa (HWID)
 
-Na primeira execução do **RezTerm v2.0.7**, o sistema iniciará em **Tela Cheia Maximizada** apresentando a tela modal de bloqueio de segurança:
+Na primeira execução do **RezTerm v2.0.8**, o sistema iniciará em **Tela Cheia Maximizada** apresentando a tela modal de bloqueio de segurança:
 
 1. **Copie seu Código Único (HWID)**: Clique no botão **`[ Copiar meu HWID e Solicitar Licença ]`**. O sistema gerará um hash de 12 caracteres único da sua placa-mãe e processador (ex: `REZ-8F9A-2B1C-4D5E`).
 2. **Envie para a Diretoria Telecom**: Abra chamado ou envie uma mensagem direta ao gestor responsável informando seu Nome, Setor e o código HWID copiado.
@@ -43,13 +43,13 @@ Na primeira execução do **RezTerm v2.0.7**, o sistema iniciará em **Tela Chei
 
 ---
 
-## 🛠️ 3. Suíte de Ferramentas Integradas (v2.0.7)
+## 🛠️ 3. Suíte de Ferramentas Integradas (v2.0.8)
 
 | Módulo | Descrição Principal | Destaques de Engenharia |
 | :--- | :--- | :--- |
 | **📊 Dashboard & Latência** | Monitoramento em tempo real da saúde da conexão e dual-stack ISP. | Gráficos de latência ao vivo, detecção de perda de pacotes, **Gateway Dual (exibição simultânea de saídas IPv4 e IPv6 Neon)** e **Badge de Aceleração de Hardware com Diagnóstico GPU/SIMD**. |
 | **💻 Terminal SSH Studio** | Client SSH multi-aba de alta performance com `xterm.js`. | **Fluidez Extrema a 60 FPS** via debouncing buffer C# (16ms) e bypass streaming JS para comandos >12KB, **Sincronização Dinâmica SIGWINCH** (`htop`/`btop`), **Syntax Highlighting** (Cisco/Datacom com `deny` em vermelho), **Copiar Tudo Buffer** e **12 Fabricantes colapsados por padrão**. |
-| **🏓 Ping & Trace Suite** | Motores avançados de ICMP, Ping Contínuo, Cadeia Multi-Ping e MTR. | **Cadeia Multi-Ping** com laudo formatado, **Seletor de Pilha IP (IPv4/IPv6/Auto)** e **Cálculo de Jitter de Destino** isolado no MTR. |
+| **🏓 Ping & Trace Suite** | Motores avançados de ICMP, Ping Contínuo, Cadeia Multi-Ping e MTR. | **Cadeia Multi-Ping** com laudo formatado, **Seletor de Pilha IP (IPv4/IPv6/Auto)**, **Cálculo de Jitter de Destino** isolado no MTR e **HotFix v2.0.8 de Zero-Loss Racing e Anti-Oscilação Visual**. |
 | **📡 IP Scan & APIPA** | Varredura minuciosa de sub-redes locais com ARP/Ping/TCP Sweep. | **Aceleração Multi-Core SIMD dinâmica**, saturando a interface de rede e reduzindo o tempo de varreduras gigantes em até 20x, com **Resgate APIPA (RFC 3927)**. |
 | **⚡ Live TCP/UDP Watcher** | Monitoramento de sockets abertos e conexões ativas no Windows. | Integração nativa com **GeoLite2 MMDB em Memória (MMF)** projetando conexões em **Mapa Mundi interativo**. |
 | **🌐 NetOps & Whois/IRR** | Consulta unificada a bases mundiais de registro de IPs e ASNs. | Conectores diretos para RADB, RIPE, LACNIC, ARIN, APNIC e AFRINIC com formatação de blocos BGP. |
