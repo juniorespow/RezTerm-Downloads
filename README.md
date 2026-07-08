@@ -1,4 +1,4 @@
-# ⚡ RezTerm v2.0.8 (Cyberpunk SOC/NOC Suite - Telecom Edition)
+# ⚡ RezTerm v2.1.0 (Cyberpunk SOC/NOC & Forensics PCAP Suite - Telecom Edition)
 
 <div align="center">
 
@@ -22,7 +22,7 @@ O acesso é estritamente restrito e exige autenticação de licença vinculada a
 
 ---
 
-## 📥 1. Como Baixar e Instalar (Release v2.0.8)
+## 📥 1. Como Baixar e Instalar (Release v2.1.0)
 
 A distribuição do **RezTerm** é realizada via assistente de instalação blindado que configura o ambiente no perfil do técnico sem exigir privilégios de administrador global (`%LocalAppData%\RezTerm`):
 
@@ -34,7 +34,7 @@ A distribuição do **RezTerm** é realizada via assistente de instalação blin
 
 ## 🔑 2. Como Ativar sua Licença Corporativa (HWID)
 
-Na primeira execução do **RezTerm v2.0.8**, o sistema iniciará em **Tela Cheia Maximizada** apresentando a tela modal de bloqueio de segurança:
+Na primeira execução do **RezTerm v2.1.0**, o sistema iniciará em **Tela Cheia Maximizada** apresentando a tela modal de bloqueio de segurança:
 
 1. **Copie seu Código Único (HWID)**: Clique no botão **`[ Copiar meu HWID e Solicitar Licença ]`**. O sistema gerará um hash de 12 caracteres único da sua placa-mãe e processador (ex: `REZ-8F9A-2B1C-4D5E`).
 2. **Envie para a Diretoria Telecom**: Abra chamado ou envie uma mensagem direta ao gestor responsável informando seu Nome, Setor e o código HWID copiado.
@@ -43,11 +43,12 @@ Na primeira execução do **RezTerm v2.0.8**, o sistema iniciará em **Tela Chei
 
 ---
 
-## 🛠️ 3. Suíte de Ferramentas Integradas (v2.0.8)
+## 🛠️ 3. Suíte de Ferramentas Integradas (v2.1.0)
 
 | Módulo | Descrição Principal | Destaques de Engenharia |
 | :--- | :--- | :--- |
 | **📊 Dashboard & Latência** | Monitoramento em tempo real da saúde da conexão e dual-stack ISP. | Gráficos de latência ao vivo, detecção de perda de pacotes, **Gateway Dual (exibição simultânea de saídas IPv4 e IPv6 Neon)** e **Badge de Aceleração de Hardware com Diagnóstico GPU/SIMD**. |
+| **📡 Leitor PCAP Forense (`NOVO v2.1.0`)** | Analisador e dissecador forense de pacotes (.pcap/.pcapng) com aceleração SIMD e mapeamento no kernel. | **Motor Gráfico 60 FPS GPU Direct Canvas/WebGL (`pcap-cyberpunk-map.js`)** com luzes pulsantes esmaecendo e brilhando (*Breathing Neon Particles*), **Zoom/Pan com bloqueio nativo de rolagem da janela (`{passive: false}`)** e resiliência a abas; **Heurística de Telecom, NOC e SOC** para 9 protocolos core (`BGP`, `OSPF`, `IS-IS`, `MPLS/VPLS`, `PPPoE`, `DHCP`, `IPv6 RA Guard`), inspeção interativa de quadros com Hex Dump e ASCII, botão de upload personalizado e popup de aviso forense. |
 | **💻 Terminal SSH Studio** | Client SSH multi-aba de alta performance com `xterm.js`. | **Fluidez Extrema a 60 FPS** via debouncing buffer C# (16ms) e bypass streaming JS para comandos >12KB, **Sincronização Dinâmica SIGWINCH** (`htop`/`btop`), **Syntax Highlighting** (Cisco/Datacom com `deny` em vermelho), **Copiar Tudo Buffer** e **12 Fabricantes colapsados por padrão**. |
 | **🏓 Ping & Trace Suite** | Motores avançados de ICMP, Ping Contínuo, Cadeia Multi-Ping e MTR. | **Cadeia Multi-Ping** com laudo formatado, **Seletor de Pilha IP (IPv4/IPv6/Auto)**, **Cálculo de Jitter de Destino** isolado no MTR e **HotFix v2.0.8 de Zero-Loss Racing e Anti-Oscilação Visual**. |
 | **📡 IP Scan & APIPA** | Varredura minuciosa de sub-redes locais com ARP/Ping/TCP Sweep. | **Aceleração Multi-Core SIMD dinâmica**, saturando a interface de rede e reduzindo o tempo de varreduras gigantes em até 20x, com **Resgate APIPA (RFC 3927)**. |
