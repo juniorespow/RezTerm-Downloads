@@ -1,4 +1,4 @@
-# ⚡ RezTerm v2.2.0 (Cyberpunk SOC/NOC & Forensics PCAP Suite - Telecom Edition)
+# ⚡ RezTerm v2.2.1 (Cyberpunk SOC/NOC & Forensics PCAP Suite - Telecom Edition)
 
 <div align="center">
 
@@ -11,7 +11,7 @@
 ![Anti-CoPP Engine](https://img.shields.io/badge/Anti--CoPP%20Probe-3--Phase%20Hybrid-00f0ff?style=for-the-badge)
 
 **A Suíte Definitiva de Engenharia de Redes, Diagnóstico SOC/NOC, Auditoria Forense e Terminal SSH Multi-Aba.**  
-Desenvolvida por **Reginaldo Junior (Razon)** combinando a performance nativa do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface ultramoderna Blazor Hybrid em estética **Cyberpunk Dark Neon**, **Responsividade Universal Auto-Ajustável** e motor de **Aceleração de Hardware Híbrida (GPU + SIMD)** com **Inteligência Anti-CoPP 3 Fases**.
+Desenvolvida por **Reginaldo Junior (Razon)** combinando a performance nativa do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface ultramoderna Blazor Hybrid em estética **Cyberpunk Dark Neon**, **Responsividade Universal Auto-Ajustável**, **Telemetria Nativa de RAM/GPU (`v2.2.1`)** e motor de **Aceleração de Hardware Híbrida (GPU + SIMD)** com **Inteligência Anti-CoPP 3 Fases**.
 
 ---
 
@@ -23,7 +23,7 @@ O acesso é estritamente restrito e exige autenticação de licença vinculada a
 
 ---
 
-## 📥 1. Como Baixar e Instalar (Release v2.2.0)
+## 📥 1. Como Baixar e Instalar (Release v2.2.1)
 
 A distribuição do **RezTerm** é realizada via assistente de instalação blindado que configura o ambiente no perfil do técnico sem exigir privilégios de administrador global (`%LocalAppData%\RezTerm`):
 
@@ -35,7 +35,7 @@ A distribuição do **RezTerm** é realizada via assistente de instalação blin
 
 ## 🔑 2. Como Ativar sua Licença Corporativa (HWID)
 
-Na primeira execução do **RezTerm v2.2.0**, o sistema iniciará em **Tela Cheia Maximizada** apresentando a tela modal de bloqueio de segurança:
+Na primeira execução do **RezTerm v2.2.1**, o sistema iniciará em **Tela Cheia Maximizada** apresentando a tela modal de bloqueio de segurança:
 
 1. **Copie seu Código Único (HWID)**: Clique no botão **`[ Copiar meu HWID e Solicitar Licença ]`**. O sistema gerará um hash de 12 caracteres único da sua placa-mãe e processador (ex: `REZ-8F9A-2B1C-4D5E`).
 2. **Envie para a Diretoria Telecom**: Abra chamado ou envie uma mensagem direta ao gestor responsável informando seu Nome, Setor e o código HWID copiado.
