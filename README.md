@@ -1,4 +1,4 @@
-# ⚡ RezTerm v2.2.5 (Cyberpunk SOC/NOC & Forensics PCAP Suite - Telecom Edition)
+# ⚡ RezTerm v2.2.6 (Cyberpunk SOC/NOC & Forensics PCAP Suite - Telecom Edition)
 
 <div align="center">
 
@@ -8,10 +8,10 @@
 ![C#](https://img.shields.io/badge/C%23%2013-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![Security](https://img.shields.io/badge/Security-DPAPI%20%2B%20HMAC-00f0ff?style=for-the-badge)
 ![Hardware Acceleration](https://img.shields.io/badge/HW%20Acceleration-GPU%20%2B%20SIMD-00ff88?style=for-the-badge)
-![RF Intelligence](https://img.shields.io/badge/RF%20Fluke%20Engine-CCI%2FACI%20Triage-00f0ff?style=for-the-badge)
+![RF Intelligence](https://img.shields.io/badge/RF%20Fluke%20Engine-MESH%20Triage-00f0ff?style=for-the-badge)
 
 **A Suíte Definitiva de Engenharia de Redes, Diagnóstico SOC/NOC, Auditoria Forense e Terminal SSH Multi-Aba.**  
-Desenvolvida por **Reginaldo Junior (Razon)** combinando a performance nativa do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface ultramoderna Blazor Hybrid em estética **Cyberpunk Dark Neon**, **Inteligência de Engenharia RF no Wireless Tests (`v2.2.5`)**, **Responsividade Universal Auto-Ajustável (`v2.2.5`)**, **Processo Nativo `RezTerm.exe` no Windows Task Manager (`v2.2.3`)**, **Telemetria Nativa de RAM/GPU (`v2.2.2`)** e motor de **Aceleração de Hardware Híbrida (GPU + SIMD)** com **Inteligência Anti-CoPP 3 Fases**.
+Desenvolvida por **Reginaldo Junior (Razon)** combinando a performance nativa do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface ultramoderna Blazor Hybrid em estética **Cyberpunk Dark Neon**, **Inteligência RF MESH / Repetidores no Wireless Tests (`v2.2.6`)**, **Responsividade Universal Auto-Ajustável (`v2.2.5`)**, **Processo Nativo `RezTerm.exe` no Windows Task Manager (`v2.2.3`)**, **Telemetria Nativa de RAM/GPU (`v2.2.2`)** e motor de **Aceleração de Hardware Híbrida (GPU + SIMD)** com **Inteligência Anti-CoPP 3 Fases**.
 
 ---
 
@@ -23,7 +23,7 @@ O acesso é estritamente restrito e exige autenticação de licença vinculada a
 
 ---
 
-## 📥 1. Como Baixar e Instalar (Release v2.2.5)
+## 📥 1. Como Baixar e Instalar (Release v2.2.6)
 
 A distribuição do **RezTerm** é realizada via assistente de instalação blindado que configura o ambiente no perfil do técnico sem exigir privilégios de administrador global (`%LocalAppData%\RezTerm`):
 
