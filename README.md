@@ -1,4 +1,4 @@
-# ⚡ RezTerm v2.2.2 (Cyberpunk SOC/NOC & Forensics PCAP Suite - Telecom Edition)
+# ⚡ RezTerm v2.2.3 (Cyberpunk SOC/NOC & Forensics PCAP Suite - Telecom Edition)
 
 <div align="center">
 
@@ -11,7 +11,7 @@
 ![Anti-CoPP Engine](https://img.shields.io/badge/Anti--CoPP%20Probe-3--Phase%20Hybrid-00f0ff?style=for-the-badge)
 
 **A Suíte Definitiva de Engenharia de Redes, Diagnóstico SOC/NOC, Auditoria Forense e Terminal SSH Multi-Aba.**  
-Desenvolvida por **Reginaldo Junior (Razon)** combinando a performance nativa do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface ultramoderna Blazor Hybrid em estética **Cyberpunk Dark Neon**, **Responsividade Universal Auto-Ajustável (`v2.2.2`)**, **Telemetria Nativa de RAM/GPU (`v2.2.2`)** e motor de **Aceleração de Hardware Híbrida (GPU + SIMD)** com **Inteligência Anti-CoPP 3 Fases**.
+Desenvolvida por **Reginaldo Junior (Razon)** combinando a performance nativa do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface ultramoderna Blazor Hybrid em estética **Cyberpunk Dark Neon**, **Responsividade Universal Auto-Ajustável (`v2.2.3`)**, **Processo Nativo `RezTerm.exe` no Windows Task Manager (`v2.2.3`)**, **Telemetria Nativa de RAM/GPU (`v2.2.2`)** e motor de **Aceleração de Hardware Híbrida (GPU + SIMD)** com **Inteligência Anti-CoPP 3 Fases**.
 
 ---
 
@@ -23,7 +23,7 @@ O acesso é estritamente restrito e exige autenticação de licença vinculada a
 
 ---
 
-## 📥 1. Como Baixar e Instalar (Release v2.2.2)
+## 📥 1. Como Baixar e Instalar (Release v2.2.3)
 
 A distribuição do **RezTerm** é realizada via assistente de instalação blindado que configura o ambiente no perfil do técnico sem exigir privilégios de administrador global (`%LocalAppData%\RezTerm`):
 
