@@ -1,4 +1,4 @@
-# ⚡ RezTerm v2.2.6 (Cyberpunk SOC/NOC & Forensics PCAP Suite - Telecom Edition)
+# ⚡ RezTerm v2.2.8 (Cyberpunk SOC/NOC & Forensics PCAP Suite - Telecom Edition)
 
 <div align="center">
 
@@ -23,7 +23,7 @@ O acesso é estritamente restrito e exige autenticação de licença vinculada a
 
 ---
 
-## 📥 1. Como Baixar e Instalar (Release v2.2.6)
+## 📥 1. Como Baixar e Instalar (Release v2.2.8)
 
 A distribuição do **RezTerm** é realizada via assistente de instalação blindado que configura o ambiente no perfil do técnico sem exigir privilégios de administrador global (`%LocalAppData%\RezTerm`):
 
@@ -44,12 +44,12 @@ Na primeira execução do **RezTerm v2.2.2**, o sistema iniciará em **Tela Chei
 
 ---
 
-## 🛠️ 3. Suíte de Ferramentas Integradas (v2.2.6)
+## 🛠️ 3. Suíte de Ferramentas Integradas (v2.2.8)
 
 | Módulo | Descrição Principal | Destaques de Engenharia |
 | :--- | :--- | :--- |
 | **📶 Wireless Tests RF (`v2.2.6`)** | Analisador de espectro Wi-Fi e qualidade de sinal em tempo real (Fluke AirCheck RF). | **Inteligência MESH / Zero Falsos Positivos (`v2.2.6`)**: Algoritmo que reconhece automaticamente redes MESH Wi-Fi (ex: TP-Link Deco, Google Wifi) e repetidores operando no mesmo SSID e Canal, excluindo-os da contagem de interferência co-canal (`CCI`) e separando redes concorrentes externas de nós cooperativos (`ConnectedMeshOrSiblingNodes`); **Modal Cyberpunk Interativo (`🚨 ABRIR LAUDO DE MELHORIAS (@conn.Ssid)`)** com tabela dedicada de **Topologia MESH / Multi-AP**, indicação do canal mais limpo do local (`GetBestRecommendedChannel`), recomendações de Band Steering para 5 GHz e auditoria de Fast Roaming 802.11k/v/r; **Auditoria IEEE Priorizada (`⭐ REDE CONECTADA`)** no topo da aba de boas práticas e **Responsividade Inteligente para Notebooks de 14" (`1366x768`)** na tabela de telemetria e no grid de canais. |
-| **📊 Dashboard & Latência (`v2.2.2`)** | Monitoramento em tempo real da saúde da conexão e dual-stack ISP. | **Responsividade Universal Auto-Ajustável (Flexbox)** sem rolagem externa dupla, **Telemetria Nativa de RAM (`GlobalMemoryStatusEx`)** sincronizada com o Gerenciador de Tarefas, **HotFix GPU Load Universal (`NVIDIA`, `Intel`, `AMD`)** com `0.0%` sem `N/A`, **Motor Híbrido Anti-CoPP Rate-Limit (TCP SYN Bypass em portas 80/443)** para evitar alarmes falsos de queda, **Poisson Random Jittering & Exponential Backoff Pacing**, Gateway Dual e Badge de Aceleração GPU/SIMD. |
+| **📊 Dashboard & Latência (`v2.2.8`)** | Monitoramento em tempo real da saúde da conexão e dual-stack ISP. | **Boot HUD Cyberpunk Prolongado (Sincronizado c/ Conectado, Radares Ping & IP)** e **Padronização Global do Ícone (`app_icon.jpg`)**, **Responsividade Universal Auto-Ajustável (Flexbox)** sem rolagem externa dupla, **Telemetria Nativa de RAM (`GlobalMemoryStatusEx`)**, **HotFix GPU Load Universal (`NVIDIA`, `Intel`, `AMD`)** com `0.0%` sem `N/A`, **Motor Híbrido Anti-CoPP Rate-Limit (TCP SYN Bypass em portas 80/443)** para evitar alarmes falsos de queda, **Poisson Random Jittering & Exponential Backoff Pacing**, Gateway Dual e Badge de Aceleração GPU/SIMD. |
 | **📡 Leitor PCAP Forense (`v2.1.0`)** | Analisador e dissecador forense de pacotes (.pcap/.pcapng) com aceleração SIMD e mapeamento no kernel. | **Motor Gráfico 60 FPS GPU Direct Canvas/WebGL (`pcap-cyberpunk-map.js`)** com luzes pulsantes esmaecendo e brilhando (*Breathing Neon Particles*), **Zoom/Pan com bloqueio nativo de rolagem da janela (`{passive: false}`)** e resiliência a abas; **Heurística de Telecom, NOC e SOC** para 9 protocolos core (`BGP`, `OSPF`, `IS-IS`, `MPLS/VPLS`, `PPPoE`, `DHCP`, `IPv6 RA Guard`), inspeção interativa de quadros com Hex Dump e ASCII, botão de upload personalizado e popup de aviso forense. |
 | **💻 Terminal SSH Studio (`v2.2.0`)** | Client SSH multi-aba de alta performance com `xterm.js`. | **Correção do Bug de Travamento Cisco Exit Lock (desconexão instantânea e liberação limpa de PTY/ShellStream)**, **Fluidez Extrema a 60 FPS** via debouncing buffer C# (16ms) e bypass streaming JS para comandos >12KB, **Sincronização Dinâmica SIGWINCH** (`htop`/`btop`), **Syntax Highlighting** e **Copiar Tudo Buffer**. |
 | **🏓 Ping & Trace Suite (`v2.2.3`)** | Motores avançados de ICMP, Ping Contínuo, Cadeia Multi-Ping e MTR. | **Responsividade no MTR Avançado (`v2.2.3`)**: Painel superior multi-linha com auto-escalonamento (`min-width: 240px`); **Motor Inteligente Anti-CoPP Rate-Limit 3 Fases (Heurística de Salto Intermediário vs Destino + Poisson Jittering + TCP SYN Bypass)** com selo azul neon **`⚡ CoPP BYPASS`**, **Cadeia Multi-Ping** com laudo formatado, **Seletor de Pilha IP (IPv4/IPv6/Auto)** e **Cálculo de Jitter RFC 3393** isolado no MTR. |
@@ -61,7 +61,16 @@ Na primeira execução do **RezTerm v2.2.2**, o sistema iniciará em **Tela Chei
 
 ---
 
-## 🚀 4. Destaques da Evolução Arquitetural (`v2.2.6`)
+## 🚀 4. Destaques da Evolução Arquitetural (`v2.2.8`)
+
+### 🚀 Release v2.2.8 (Padronização da Identidade Visual & Prolongamento Inteligente do Boot HUD)
+* **Padronização Global do Ícone da Marca (`app_icon.jpg`)**: Sincronização da logo oficial da marca entre a inicialização WebView (`wwwroot/app_icon.jpg`), ícone nativo da janela WPF (`MainWindow.xaml`) e centro do reator ciano no HUD da tela de loading.
+* **Prolongamento do Boot HUD no Dashboard (`DashboardTab.razor`)**: O motor de interface assume e prolonga a exibição do HUD Cyberpunk de inicialização até que todas as 3 fases fundamentais de coleta (`Placas L2 / Status Conectado`, `Radares de Ping` e `IP Público Externo`) estejam completas, eliminando a exibição de cards em *"Buscando..."* ou *"Testando..."*.
+* **Transição Suave e Trava de Sessão Pós-Boot (`_hasCompletedSystemBoot`)**: Finalizada a transição de fade-out suave revelando o painel populado, a alternância de guias no sistema ocorre com navegação **instantânea**.
+
+### 🎯 Release v2.2.7 (Cálculo de Perda de Rota por Destino Final & Anti-CoPP Efetivo no MTR)
+* **Cálculo da Rota Exclusivo pelo Destino Final (`IcmpMenuTab.razor`)**: O cálculo de **Perda de Rota** e os contadores globais de **Enviados / Recebidos** no MTR Avançado passaram a ser 100% baseados na conectividade com o nó destino da rota (`destHop`). Se não houve perda de pacotes no destino final (`0.0%`), a rota inteira é classificada como saudável com `0.0% LOSS`.
+* **Neutralização de Falsos Positivos de Drops Intermediários (CoPP Rate-Limit)**: Descartados intermediários por limitação de processador exibem **`⚡ CoPP RATE-LIMIT`** (`0.0% (CoPP XX%)`) na tabela e no relatório exportado (`CopyMtrReport`) sem contaminar a telemetria geral.
 
 ### 🔗 Release v2.2.6 (Inteligência RF MESH / Repetidores & Zero Falsos Positivos)
 * **Reconhecimento Arquitetural MESH / Multi-AP (`ConnectedMeshOrSiblingNodes`)**: Em redes Wi-Fi em malha (ex: **TP-Link Deco**, **Google Wifi**, **MikroTik Mesh**) e repetidores sem cabo de rede, os satélites compartilham o mesmo SSID, Canal e Frequência para realizar o *Wireless Backhaul*. O motor identifica automaticamente as antenas cooperativas, separando ruído de terceiros do comportamento correto do roteador.
