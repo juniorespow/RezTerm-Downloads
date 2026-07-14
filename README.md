@@ -1,4 +1,4 @@
-# ⚡ RezTerm v2.2.9 (Cyberpunk Network Engineer Toolkit & Forensics Suite)
+# ⚡ RezTerm v2.2.9 (Network Engineer Toolkit)
 
 <div align="center">
 
