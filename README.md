@@ -11,7 +11,7 @@
 ![RF Intelligence](https://img.shields.io/badge/RF%20Fluke%20Engine-MESH%20Triage-00f0ff?style=for-the-badge)
 
 **A Suíte Definitiva de Engenharia de Redes, Diagnóstico SOC/NOC, Auditoria Forense, Leitura PCAP SIMD e Terminal SSH Multi-Aba.**  
-Desenvolvido na marra por **Reginaldo Junior**, um Engenheiro de Redes raiz e cansado de ver empresas e analistas pagando fortunas de licenças anuais (R$ 30.000,00+ por ano) por softwares fechados, lentos, cheios de burocracia e paywalls. O **RezTerm** nasceu da revolta da galera Nerd de tecnologia: uma suíte "root/cyberpunk" de diagnóstico e monitoramento, rodando direto no metal do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface ultramoderna Blazor Hybrid em estética **Cyberpunk Dark Neon**, **Correção do Travamento Cisco Exit Lock no SSH (`v2.2.9`)**, **Responsividade Universal no Menu para Notebooks de 14" (`v2.2.9`)**, **Inteligência RF MESH / Repetidores (`v2.2.6`)**, **Processo Nativo `RezTerm.exe` (`v2.2.3`)** e o revolucionário **Motor Inteligente Anti-CoPP Rate-Limit 3 Fases**.
+Desenvolvido na marra por **Reginaldo Junior**, um Engenheiro de Redes cansado de ver analistas pagando fortunas de licenças anuais por softwares fechados, lentos, cheios de burocracia e paywalls. O **RezTerm** nasceu da necessidade de enxugar custos em ambientes que é apenas disponibilizado máquinas com Windows para se trabalhar: uma suíte  de diagnóstico e monitoramento, rodando direto no metal do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface ultramoderna Blazor Hybrid em estética **Cyberpunk Dark Neon**.
 
 ---
 
