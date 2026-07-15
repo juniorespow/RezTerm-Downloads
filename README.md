@@ -68,7 +68,7 @@ Para proteger a propriedade intelectual corporativa e evitar a distribuição n�
 * **Autenticação Vinculada ao Hardware (HWID)**: O sistema gera um código único e intransferível de 12 caracteres (ex: `REZ-8F9A-2B1C-4D5E`) computado via hash criptográfico SHA-256 a partir do `MachineGuid` e da assinatura de CPU/Placa-mãe do PC ou Notebook do analista.
 * **Chaves Corporativas HMAC-SHA256**: A licença não funciona por simples verificação de texto, mas sim por assinatura criptográfica **HMAC-SHA256** utilizando um segredo mestre de 256 bits (`MasterSecret`). Qualquer tentativa de adulteração do arquivo `license.json` ou da data de validade invalida a chave instantaneamente.
 * **Fluxo para o Usuário (Analista/HelpDesk)**:
-  1. Ao iniciar o `SepulnationTerm.exe`, o sistema abre em **Tela Cheia Maximizada** e exibe a tela modal de bloqueio **🔒 RezTerm Corporativo - Licença Requerida**.
+  1. Ao iniciar o `RezTerm.exe`, o sistema abre em **Tela Cheia Maximizada** e exibe a tela modal de bloqueio **🔒 RezTerm Corporativo - Licença Requerida**.
   2. O técnico clica em **`[ Copiar meu HWID e Solicitar Licença ]`** e envia o código para a gestão do sistema.
   3. Com a chave recebida, o técnico cola no campo e clica em **Ativar e Desbloquear Sistema**.
   4. O status fica sempre visível no topo da Dashboard via badge verde brilhante `🔒 Licenciado (...)`. Ao clicar no badge, um popup interativo exibe o titular, setor, HWID e chave HMAC-SHA256.
