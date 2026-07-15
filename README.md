@@ -165,5 +165,5 @@ O RezTerm possui um assistente bootstrapper nativo (`RezTermSetup.exe`) que gara
 
 ---
 <div align="center">
-<b>RezTerm Network Engineer Toolkit</b> • Engenharia Cibernética de Alta Performance • Reginaldo Junior
+<b>RezTerm Network Engineer Toolkit</b> • Engenharia de Redes de Alta Performance • Reginaldo Junior
 </div>
