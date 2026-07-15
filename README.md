@@ -164,29 +164,6 @@ O RezTerm possui um assistente bootstrapper nativo (`RezTermSetup.exe`) que gara
 * **Auto-Updater via GitHub CDN**: Ao abrir a ferramenta, o serviço `UpdateService` consulta anonimamente a API pública de lançamentos (`juniorespow/RezTerm-Downloads`). Caso uma nova versão esteja disponível, o analista recebe um alerta no topo da tela podendo baixar e aplicar a atualização em 1 clique sem interromper suas sessões.
 
 ---
-
-## 🛠️ 8. Setup do Ambiente de Desenvolvimento Local (Audicom Dev Team)
-
-Para os desenvolvedores e arquitetos do time de Engenharia de Redes que farão a manutenção, depuração ou compilação local do código-fonte, preparamos um pipeline automatizado de preparação do ambiente via PowerShell (`setup_dev_env.ps1`) e catálogo de extensões recomendadas para Visual Studio, VS Code e JetBrains Rider (`EXTENSOES_DEVS_AUDICOM.txt`).
-
-### 🚀 Automação em 1 Clique (`setup_dev_env.ps1`)
-Abra um terminal PowerShell (recomendado como Administrador) na raiz do repositório e execute:
-```powershell
-.\setup_dev_env.ps1
-```
-O script realizará automaticamente:
-1. **Verificação do `winget` (Windows Package Manager)** e de privilégios de execução no sistema.
-2. **Instalação / Atualização dos SDKs Core**: `.NET SDK 8.0/9.0/10.0`, `Git for Windows`, `Node.js LTS` e `Npcap Driver` (com suporte compatível a `WinPcap`).
-3. **Verificação de Workloads Desktop/Web**: Atualização dos motores `ManagedDesktop` e `NetWeb` (WPF e Blazor Hybrid/WebView2).
-4. **Verificação e Alinhamento de IDE**: Detecção inteligente do **Visual Studio 2022**, **JetBrains Rider** ou **Visual Studio Code / Cursor**.
-5. **Copia as bases de dados GeoIP offline (`GeoLite2-Country.mmdb`)** para `%LocalAppData%\RezTerm\GeoLite2` para que os testes de tráfego TCP/UDP e forense rodem imediatamente em modo local.
-6. **Executa `dotnet restore` e `dotnet build`** na solução para garantir que o projeto compile sem nenhum erro.
-
-### 💎 Configuração de IDE e Extensões
-* **[EXTENSOES_DEVS_AUDICOM.txt](file:///C:/Users/junio/source/repos/SepulnationTerm/EXTENSOES_DEVS_AUDICOM.txt)**: Guia completo detalhando os workloads do Visual Studio 2022 (`ManagedDesktop`, `NetWeb`), extensões essenciais (`Roslynator`, `XAML Styler`, `SonarLint`, `Mermaid Editor`) e configuração no JetBrains Rider (`Heap Allocations Viewer`).
-* **[.vscode/extensions.json](file:///C:/Users/junio/source/repos/SepulnationTerm/.vscode/extensions.json)**: Pré-configuração de workspace. Ao abrir a pasta no **VS Code** ou **Cursor AI**, a IDE recomendará automaticamente as extensões necessárias (`ms-dotnettools.csdevkit`, `bienode.mermaid-previewer`, `usernamehw.errorlens`, `aaron-bond.better-comments`, `esbenp.prettier-vscode`).
-
----
 <div align="center">
 <b>RezTerm Network Engineer Toolkit</b> • Engenharia Cibernética de Alta Performance • Reginaldo Junior
 </div>
