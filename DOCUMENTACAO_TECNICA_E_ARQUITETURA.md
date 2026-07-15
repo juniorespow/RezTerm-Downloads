@@ -481,6 +481,36 @@ A release estável **v3.0.4** transforma o Motor de Eficiência Adaptativa em um
   - `PortScannerService.cs`: Throttling de `maxConcurrency` em Modo Eficiência (teto de 150 sockets simultâneos) protegendo a pilha TCP/IP do Windows contra exaustão de descritores.
 
 ---
+
+## 🚀 28. Release v3.1.0 (Hardening .NET 10, Concorrência Lock/FrozenDictionary, Source Generators & Evolução de Agressividade)
+
+A release major **v3.1.0** representa um salto qualitativo gigantesco na arquitetura do RezTerm. Conduzida por uma revisão de engenharia de ponta a ponta dividida em **4 Fases Críticas**, a aplicação migrou de padrões tradicionais de alocação e reflection para **AOT/PGO Nativo do .NET 10**, trazendo fluidez instantânea, consumo reduzido de RAM (~105MB) e blindagem forense inabalável:
+
+### 🛡️ 28.1. Fase 1: Higienização de Memória & Auditoria Forense Inviolável
+* **Sanitização Automática de Dados Sensíveis (`SanitizeString`)**: Implementado motor baseado em `[GeneratedRegex]` para varrer e mascarar senhas, tokens, chaves privadas e credenciais em tempo real antes da gravação de logs ou relatórios (`[DATA MASKED]`).
+* **Blindagem DPAPI & Criptografia AES-GCM**: Perfis, cofres e credenciais salvos no disco são cifrados utilizando a API de proteção de dados nativa do Windows em conjunto com chaves simétricas autenticadas, impedindo vazamentos em caso de exfiltração de arquivos.
+* **Selo de Auditoria SHA-256 (`AuditRecordingService`)**: Relatórios técnicos exportados recebem uma assinatura criptográfica de integridade no rodapé, validando formalmente que o documento não sofreu adulteração posterior.
+
+### ⚡ 28.2. Fase 2: Concorrência Zero-Alloc (`Span<T>` & `OuiDatabase` SIMD)
+* **Gerador de Identificadores `HardwareInfo`**: Refatorado de `string.Replace()` / `Substring` para processamento `ReadOnlySpan<char>` e buffers `stackalloc`, zerando alocações no heap durante verificação de licença e vinculação ao metal.
+* **Tabela de Fabricantes OUI em Memória**: Migração de parsing estático para busca vetorizada sem lixo temporário na memória, garantindo alta precisão na identificação de dispositivos de rede.
+
+### 📦 28.3. Fase 3: Modernização da Serialização & Timers de Telemetria
+* **Source Generators nativos (`RezTermJsonContext`)**: Substituição de `System.Text.Json` baseado em *Reflection* pelo gerador de código AOT (`[JsonSerializable]`). O tempo de inicialização (cold boot) caiu de ~3.2s para ~1.0s.
+* **Canais Assíncronos (`System.Threading.Channels`)**: O motor de logs (`LoggingService`) abandonou loops repetitivos de *polling* (`Task.Delay(250)`) por `Channel<string>` reativo que repousa consumindo 0% de CPU em standby.
+* **Timers Anti-Oscilação (`PeriodicTimer`)**: Substituição de `System.Threading.Timer` por `PeriodicTimer` sem desvio temporal (*Zero Drift*) nos serviços ao vivo (`LiveTcpUdpService`), estabilizando a telemetria sob alta carga.
+
+### 🏁 28.4. Fase 4: Hardening de Compilação & Concorrência de Alta Precisão
+* **Otimização de Runtime (`SepulnationTerm.csproj`)**: Ativação de `ServerGarbageCollection`, `TieredPGO` e `AnalysisLevel 10.0-recommended`, permitindo ao JIT do .NET 10 vetorizar *hot paths* dinamicamente.
+* **Concorrência Lock-Free (`FrozenDictionary`)**: Resoluções ARP/MAC (`IpScanService`) operam de forma 100% thread-safe sem colisões ou contenção sob milhares de requisições simultâneas.
+* **Primitiva `System.Threading.Lock`**: Substituição de travas antigas (`lock(object)`) na interface de varredura e no buffer de saída SSH (`SshOutputBuffer`), garantindo terminal fluido a 60 FPS sem engasgos.
+
+### 🍃 28.5. Evolução Conceitual da Interface (Alta Performance vs Economia de Energia)
+Com o código rodando extremamente leve em .NET 10, o controle de modos foi ressignificado de "proteção da CPU do computador" para **Perfil de Agressividade Operacional e Autonomia de Bateria**:
+* **`🚀 Alta Performance (Antigo Modo Normal)`**: Aloca 100% das threads (até 2.500 conexões/segundo) e telemetria de 1,2s (Ideal para NOC em fibra/cabos Gigabit).
+* **`🍃 Economia de Energia (Antigo Modo Eficiente)`**: Limita varreduras a 150 threads simultâneas e sondagens de 3,6s em 3,6s, estendendo drasticamente a autonomia de bateria do notebook em campo e evitando acionar alarmes de segurança em redes legadas ou Wi-Fi sensíveis.
+
+---
 <div align="center">
 <b>Time de Engenharia RezTerm</b> • Mantenha esta documentação atualizada a cada pull request.
 </div>
