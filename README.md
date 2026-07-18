@@ -1,4 +1,4 @@
-# ⚡ RezTerm v3.1.1 (Network Engineer Toolkit)
+# ⚡ RezTerm v3.2.1 (Network Engineer Toolkit)
 
 <div align="center">
 
