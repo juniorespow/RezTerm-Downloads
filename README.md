@@ -1,4 +1,4 @@
-# ⚡ RezTerm v3.2.3 (Cyberpunk Network Engineer Toolkit & Forensics Suite)
+# ⚡ RezTerm v3.3.1 (Cyberpunk Network Engineer Toolkit & Forensics Suite)
 
 <div align="center">
 
@@ -10,7 +10,7 @@
 ![Hardware Acceleration](https://img.shields.io/badge/HW%20Acceleration-GPU%20%2B%20SIMD-00ff88?style=for-the-badge)
 ![RF Intelligence](https://img.shields.io/badge/RF%20Fluke%20Engine-MESH%20Triage-00f0ff?style=for-the-badge)
 
-Suíte Definitiva de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L2/L3 e Análise de Tráfego de Alta Performance — Otimizada em **.NET 10.0 Native/ReadyToRun WPF/Blazor Hybrid** com **Arquitetura AOT/PGO Nativa e Zero-Alloc (`v3.1.0`)**, **Motor Inteligente de Agressividade &amp; Autonomia de Bateria (`v3.1.0`)**, **Aceleração Hardware (GPU/AVX2/AVX-512) Universal (`v3.0.2`)**, **Gateway Dual IPv4/IPv6 Simultâneo (`v3.0.0`)**, **Terminal SSH Studio Ultra Fluido (`v2.2.9`)** e muito mais.
+Suíte Definitiva de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L2/L3 e Análise de Tráfego de Alta Performance — Otimizada em **.NET 10.0 Native/ReadyToRun WPF/Blazor Hybrid** com **Módulo Forense Web 360° Deep Forensics (`v3.3.1`)**, **Arquitetura AOT/PGO Nativa e Zero-Alloc (`v3.1.0`)**, **Motor Inteligente de Agressividade &amp; Autonomia de Bateria (`v3.1.0`)**, **Aceleração Hardware (GPU/AVX2/AVX-512) Universal (`v3.0.2`)**, **Gateway Dual IPv4/IPv6 Simultâneo (`v3.0.0`)**, **Terminal SSH Studio Ultra Fluido (`v2.2.9`)** e muito mais.
 
 </div>
 
@@ -22,32 +22,17 @@ Desenvolvido por **Reginaldo Junior**, um Engenheiro de Redes com ampla experiê
 
 ---
 
-## 🔥 Novidades &amp; Otimizações — Versão `v3.1.0` (Julho / 2026)
+## 🔥 Novidades &amp; Otimizações — Versão `v3.3.1` (Agosto / 2026)
 
-A versão **`v3.1.0`** coroa uma revolução de engenharia no ecossistema RezTerm. O projeto foi integralmente otimizado para extrair o máximo poder do **.NET 10** através de um plano de ação em 4 Fases focadas em velocidade instantânea, baixo consumo de memória, concorrência extrema e segurança corporativa:
-
-* **⚡ Abertura e Carregamento Instantâneo (Source Generators AOT)**: O motor de serialização abandonou mecanismos legados baseados em *Reflection* e adotou o gerador nativo `[JsonSerializable]` do .NET 10 (`RezTermJsonContext`). O tempo de inicialização (*cold start*) despencou de ~3.2s para **~1.0s**, abrindo cofres, perfis e históricos no ato sem alocações extras de memória.
-* **🛡️ Blindagem de Senhas &amp; Auditoria Forense Inviolável (SHA-256 / DPAPI)**: Implementada sanitização automática (`[GeneratedRegex]`) que identifica e censura senhas, tokens e chaves privadas em logs antes de tocarem no disco (`[DATA MASKED]`). Além disso, os relatórios técnicos em PDF exportados após manutenções agora recebem um **Selo Criptográfico SHA-256** no rodapé, assegurando validade forense contra adulteração posterior.
-* **💻 Concorrência Zero-Alloc &amp; Baixo Consumo (`Span<T>` &amp; `FrozenDictionary`)**: Reescrita profunda de algoritmos quentes do sistema (geração de HWID de licença, resoluções MAC/OUI e processamento PCAP) utilizando `ReadOnlySpan<char>`, buffers `stackalloc` e estruturas congeladas `FrozenDictionary`. O uso médio de RAM caiu para a faixa de **~105 MB**, permitindo operação contínua 24/7 sem sobrecarregar laptops ou servidores.
-* **🏁 Terminal SSH 60 FPS &amp; Timers Sem Desvio (*Zero Drift*)**: A recepção de dados no terminal e na UI de varredura migrou de travas antigas (`lock(object)`) para a primitiva moderna **`System.Threading.Lock`** e canais assíncronos (`Channel<string>`), eliminando congelamentos da tela sob enxurrada de pacotes. Os diagnósticos de rede ao vivo adotaram `PeriodicTimer`, mantendo o tempo real milimetricamente preciso sem acúmulo de desvio com o passar das horas.
-* **🍃 Evolução de Agressividade &amp; Autonomia de Bateria**: Como o software se tornou extremamente leve para a CPU do computador, a comutação de perfis foi ressignificada e evoluída na interface:
-  - **`🚀 Alta Performance (Antigo Modo Normal)`**: Aloca 100% dos núcleos lógicos do sistema em até 2.500 threads simultâneas e sondagens de 1,2s. Ideal para operação no NOC via cabo Gigabit/10G e diagnósticos profundos em tempo real.
-  - **`🍃 Economia de Energia (Antigo Modo Eficiente)`**: Limita a varredura a um teto de 150 threads e sonda os adaptadores de 3,6s em 3,6s. Especialmente desenhado para técnicos em campo no notebook operando na bateria (estendendo horas de autonomia) ou ao varrer switches legados sem causar picos de processamento nos equipamentos da rede.
-* **Motor de Eficiência Adaptativa Persistente (`v3.0.4`)**: Deteção autônoma de processadores modestos ou notebooks (`<= 4` núcleos/threads como i5-6300U, i3, Celeron). Persistência automática das escolhas de perfil em JSON (`%LocalAppData%\RezTerm\engine_profile.json`), eliminando a repetição do pop-up de diagnóstico a cada inicialização! Ativação de **WMI Orientado a Eventos**, **Zero-CPU Boot Throttling**, e **Blindagem de Paralelismo (`SmartMaxDegreeOfParallelism`)**, garantindo que todas as varreduras pesadas reservem sempre um núcleo dedicado para que o mouse e a janela permaneçam 100% fluidos! Alternância entre os perfis a qualquer momento pelo menu lateral!
-* **Hotfix GPU Universal (`v3.0.2`)**: Coleta de carga de GPU resgatada e blindada para sistemas Windows localizados (PT-BR, ES, EN). Suporte completo às categorias `"GPU Engine"` / `"Mecanismo de GPU"`, capturando instâncias 3D, Compute e Video Decode com heurística de fallback em tempo real.
-* **Inteligência Integral de Conectividade & Anti-Oscilação (`v3.0.0`)**: Varredura multi-camada que categoriza com precisão cirúrgica 5 estados reais da interface (`ONLINE`, `DEGRADED`, `ISOLATED // Azul Neon`, `DISCONNECTED` e `DISABLED`). Trava de purga instantânea no motor SIMD/WMI que zera os timeouts do período offline no primeiro milissegundo em que o cabo é reconectado, eliminando 100% das oscilações e demoras na estabilização do Dashboard (`Zero Oscilação`).
-* **Triagem Ethernet L2 Customizável (`v3.0.0`)**: Parâmetros interativos no teste de Camada de Enlace permitindo inspecionar portas **Trunk vs Access (VLAN Específica ou Taggeada)** e personalizar a duração do motor de injeção contínua (até 60 segundos) com barra de progresso sincronizada.
-* **Correção do Travamento de Sessão Cisco Exit Lock (`v2.2.9`)**: Fim do congelamento ou travamento de aba ao executar comandos `exit` / `quit` em switches e roteadores Cisco (IOS / IOS-XR / NX-OS), Huawei e Datacom. Leitura assíncrona limpa (`ReadAsync` identificando 0 bytes / EOF) sincronizada com heurística de encerramento de sessão e notificação visual instantânea `🛑 SESSION STOPPED - Sessão Encerrada [ Desconectado ]`.
-* **Responsividade Absoluta no Dashboard & Menu Lateral 14" (`v3.0.0`)**: Adaptação autônoma via media queries (`@media max-height: 860px` e `720px`), garantindo que 100% dos painéis holográficos offline, cards de telemetria, títulos longos e os 13 itens da suíte caibam com perfeição na tela sem quebras indesejadas ou barras de rolagem (`scrollbar zero`).
-* **Nome de Processo Oficial `RezTerm.exe` (`v2.2.3`)**: O executável nativo compilado no Windows foi integralmente alinhado para aparecer como **`RezTerm.exe`** no Gerenciador de Tarefas e em monitoramentos de processos SOC/NOC.
-* **Motor de Aceleração de Hardware & GPU Engine (`v2.2.2`)**: Deteção automática de GPU dedicada ou integrada (NVIDIA RTX, Intel HD Graphics, AMD Radeon) com varredura robusta de instâncias 3D/Compute/phys_0 e exibição precisa de `0.0%` em repouso absoluto.
+* **🌐 Módulo Web 360° Deep Forensics Suite (`v3.3.1`)**: Inspecção profunda L3-L7 com dissecação automática de CDNs e sub-recursos (JS, CSS, Fontes, Ads), sondagem Dual-Stack IPv4 vs IPv6 Happy Eyeballs (RFC 8305) com cálculo de penalidade de fallback, PMTU Sweep por CDN com flag DF em 1472-1280B e gerador de laudos técnicos em Markdown para chamados NOC/CGR.
 
 ---
 
-## 🛠️ 2. Suíte de Ferramentas Integradas (v3.0.0)
+## 🛠️ 2. Suíte de Ferramentas Integradas (v3.3.1)
 
 | Módulo | Descrição Principal | Destaques de Engenharia |
 | :--- | :--- | :--- |
+| **🌐 Web 360° (`v3.3.1`)** | Inspecção e diagnóstico forense de desempenho web e trânsito IP de L3 a L7. | **DOM Harvester de CDNs**: Extração profunda de sub-recursos externos (JS, CSS, Fontes, Ads) no HTML raiz; **Dual-Stack Probe (RFC 8305)**: Medição IPv4 vs IPv6 com cálculo de penalidade Happy Eyeballs em ms; **PMTU DF-Bit Sweep por CDN** (1472 a 1280 bytes); **Health Score Baseado na Experiência Real** e **Gerador de Laudos Técnicos NOC/CGR em 1-Clique**. |
 | **📶 Wireless Tests RF (`v2.2.6`)** | Analisador de espectro Wi-Fi e qualidade de sinal em tempo real (Fluke AirCheck RF). | **Inteligência MESH / Zero Falsos Positivos (`v2.2.6`)**: Algoritmo que reconhece automaticamente redes MESH Wi-Fi (ex: TP-Link Deco, Google Wifi) e repetidores operando no mesmo SSID e Canal, excluindo-os da contagem de interferência co-canal (`CCI`) e separando redes concorrentes externas de nós cooperativos (`ConnectedMeshOrSiblingNodes`); **Modal Cyberpunk Interativo (`🚨 ABRIR LAUDO DE MELHORIAS`)** com tabela dedicada de **Topologia MESH / Multi-AP**, indicação do canal mais limpo do local (`GetBestRecommendedChannel`), recomendações de Band Steering para 5 GHz e auditoria de Fast Roaming 802.11k/v/r; **Auditoria IEEE Priorizada (`⭐ REDE CONECTADA`)** no topo da aba de boas práticas e **Responsividade Inteligente para Notebooks de 14" (`1366x768`)** na tabela de telemetria e no grid de canais. |
 | **📊 Dashboard & Latência (`v3.0.0`)** | Monitoramento em tempo real da saúde da conexão, dual-stack ISP e telemetria de Hardware. | **Inteligência Integral de Conectividade & Anti-Oscilação (`v3.0.0`)**: Varredura WMI/SIMD em 5 estados com purga instantânea na reconexão (`Zero Oscilação`), **Responsividade Cibernética Universal (`v3.0.0`)** no painel holográfico offline e sub-blocos, **HUD de Boot Atualizado** com legenda `NETWORK ENGINEER TOOLKIT // CYBERPUNK CORE`, **HotFix GPU Load (`v2.2.2`)** com suporte universal NVIDIA/Intel/AMD e exibição `0.0%` sem `N/A`, **Precisão Absoluta em Memória RAM (`GlobalMemoryStatusEx`)**, **Motor Híbrido Anti-CoPP Rate-Limit (TCP SYN Bypass em portas 80/443)** para evitar alarmes falsos de queda, Gateway Dual e Badge de Aceleração GPU/SIMD. |
 | **📡 Leitor PCAP Forense (`v2.1.0`)** | Analisador e dissecador forense de pacotes (.pcap/.pcapng) com aceleração SIMD e mapeamento no kernel. | **Motor Gráfico 60 FPS GPU Direct Canvas/WebGL (`pcap-cyberpunk-map.js`)** com luzes pulsantes esmaecendo e brilhando (*Breathing Neon Particles*), **Zoom/Pan com bloqueio nativo de rolagem da janela (`{passive: false}`)** e resiliência a abas; **Heurística de Redes, NOC e SOC** para 9 protocolos core (`BGP`, `OSPF`, `IS-IS`, `MPLS/VPLS`, `PPPoE`, `DHCP`, `IPv6 RA Guard`), inspeção interativa de quadros com Hex Dump e ASCII, botão de upload personalizado e popup de aviso forense. |
@@ -112,7 +97,7 @@ O **RezTerm** integra um motor de busca forense desenvolvido especificamente par
 O RezTerm adota uma postura de segurança defensiva (*Security by Design*) em cada camada de software:
 
 1. **Compilação Blindada (*Single-File ReadyToRun Native*)**:
-   - Os executáveis de distribuição (`SepulnationTerm.exe` e `RezTermSetup.exe`) são compilados no modo `PublishSingleFile` + `PublishReadyToRun`, gerando instruções de máquina pré-compiladas nativas (`win-x64`) com desativação total de símbolos de debug (`DebugSymbols=false`), dificultando ataques de engenharia reversa e decompilação via ILSpy/dnSpy.
+   - Os executáveis de distribuição (`RezTerm.exe` e `RezTermSetup.exe`) são compilados no modo `PublishSingleFile` + `PublishReadyToRun`, gerando instruções de máquina pré-compiladas nativas (`win-x64`) com desativação total de símbolos de debug (`DebugSymbols=false`), dificultando ataques de engenharia reversa e decompilação via ILSpy/dnSpy.
 2. **Cofre Criptográfico DPAPI + HMAC-SHA256 (`HostStorageService`)**:
    - Nenhuma senha de roteador, chave privada SSH ou token de API Graylog é gravada em texto plano.
    - O sistema utiliza a **DPAPI (Data Protection API) do Windows** acoplada à conta do usuário de domínio em execução (`DataProtectionScope.CurrentUser`), reforçada com um código de autenticação de mensagem hash **HMAC-SHA256** para prevenir adulterações de arquivo no diretório local.
@@ -145,7 +130,7 @@ O RezTerm adota uma postura de segurança defensiva (*Security by Design*) em ca
 * **Responsividade Inteligente para Notebooks de 14" (`1366x768`)**: Grids flexíveis (`flex: 1; min-height: 0; overflow-y: auto; max-height: none !important;`) nas tabelas de telemetria contínua e canais, eliminando cortes ou rolagem dupla de tela.
 
 ### 🖥️ Release v2.2.3 (Nome de Processo Oficial `RezTerm.exe` & Auto-Escala MTR)
-* **Processo Nativo `RezTerm.exe` no Gerenciador de Tarefas do Windows**: Compilação alinhada em `SepulnationTerm.csproj` (`<AssemblyName>RezTerm</AssemblyName>`) e extração blindada em `RezTermSetup`, garantindo que o executável oficial em monitoramentos SOC/NOC e no Windows Task Manager se chame **`RezTerm.exe`**.
+* **Processo Nativo `RezTerm.exe` no Gerenciador de Tarefas do Windows**: Compilação alinhada em `RezTerm.csproj` (`<AssemblyName>RezTerm</AssemblyName>`) e extração blindada em `RezTermSetup`, garantindo que o executável oficial em monitoramentos SOC/NOC e no Windows Task Manager se chame **`RezTerm.exe`**.
 * **Responsividade no MTR Avançado**: Painel superior multi-linha com auto-escalonamento para o campo de Destino (`min-width: 240px`).
 
 ### 📊 Release v2.2.2 (Telemetria Nativa de RAM/GPU & Anti-CoPP Rate-Limit 3 Fases)
@@ -164,6 +149,29 @@ O RezTerm possui um assistente bootstrapper nativo (`RezTermSetup.exe`) que gara
 * **Auto-Updater via GitHub CDN**: Ao abrir a ferramenta, o serviço `UpdateService` consulta anonimamente a API pública de lançamentos (`juniorespow/RezTerm-Downloads`). Caso uma nova versão esteja disponível, o analista recebe um alerta no topo da tela podendo baixar e aplicar a atualização em 1 clique sem interromper suas sessões.
 
 ---
+
+## 🛠️ 8. Setup do Ambiente de Desenvolvimento Local (Audicom Dev Team)
+
+Para os desenvolvedores e arquitetos do time de Engenharia de Redes que farão a manutenção, depuração ou compilação local do código-fonte, preparamos um pipeline automatizado de preparação do ambiente via PowerShell (`setup_dev_env.ps1`) e catálogo de extensões recomendadas para Visual Studio, VS Code e JetBrains Rider (`EXTENSOES_DEVS_AUDICOM.txt`).
+
+### 🚀 Automação em 1 Clique (`setup_dev_env.ps1`)
+Abra um terminal PowerShell (recomendado como Administrador) na raiz do repositório e execute:
+```powershell
+.\setup_dev_env.ps1
+```
+O script realizará automaticamente:
+1. **Verificação do `winget` (Windows Package Manager)** e de privilégios de execução no sistema.
+2. **Instalação / Atualização dos SDKs Core**: `.NET SDK 8.0/9.0/10.0`, `Git for Windows`, `Node.js LTS` e `Npcap Driver` (com suporte compatível a `WinPcap`).
+3. **Verificação de Workloads Desktop/Web**: Atualização dos motores `ManagedDesktop` e `NetWeb` (WPF e Blazor Hybrid/WebView2).
+4. **Verificação e Alinhamento de IDE**: Detecção inteligente do **Visual Studio 2022**, **JetBrains Rider** ou **Visual Studio Code / Cursor**.
+5. **Copia as bases de dados GeoIP offline (`GeoLite2-Country.mmdb`)** para `%LocalAppData%\RezTerm\GeoLite2` para que os testes de tráfego TCP/UDP e forense rodem imediatamente em modo local.
+6. **Executa `dotnet restore` e `dotnet build`** na solução para garantir que o projeto compile sem nenhum erro.
+
+### 💎 Configuração de IDE e Extensões
+* **[EXTENSOES_DEVS_AUDICOM.txt](file:///C:/Users/junio/source/repos/RezTerm/EXTENSOES_DEVS_AUDICOM.txt)**: Guia completo detalhando os workloads do Visual Studio 2022 (`ManagedDesktop`, `NetWeb`), extensões essenciais (`Roslynator`, `XAML Styler`, `SonarLint`, `Mermaid Editor`) e configuração no JetBrains Rider (`Heap Allocations Viewer`).
+* **[.vscode/extensions.json](file:///C:/Users/junio/source/repos/RezTerm/.vscode/extensions.json)**: Pré-configuração de workspace. Ao abrir a pasta no **VS Code** ou **Cursor AI**, a IDE recomendará automaticamente as extensões necessárias (`ms-dotnettools.csdevkit`, `bienode.mermaid-previewer`, `usernamehw.errorlens`, `aaron-bond.better-comments`, `esbenp.prettier-vscode`).
+
+---
 <div align="center">
-<b>RezTerm Network Engineer Toolkit</b> • Engenharia de Redes de Alta Performance • Reginaldo Junior
+<b>RezTerm Network Engineer Toolkit</b> • Engenharia Cibernética de Alta Performance • Reginaldo Junior
 </div>
