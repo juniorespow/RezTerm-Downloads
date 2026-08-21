@@ -1,4 +1,4 @@
-# ⚡ RezTerm v3.3.1 (Cyberpunk Network Engineer Toolkit & Forensics Suite)
+# ⚡ RezTerm v3.4.0 (Cyberpunk Network Engineer Toolkit & Forensics Suite)
 
 <div align="center">
 
@@ -10,7 +10,7 @@
 ![Hardware Acceleration](https://img.shields.io/badge/HW%20Acceleration-GPU%20%2B%20SIMD-00ff88?style=for-the-badge)
 ![RF Intelligence](https://img.shields.io/badge/RF%20Fluke%20Engine-MESH%20Triage-00f0ff?style=for-the-badge)
 
-Suíte Definitiva de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L2/L3 e Análise de Tráfego de Alta Performance — Otimizada em **.NET 10.0 Native/ReadyToRun WPF/Blazor Hybrid** com **Módulo Forense Web 360° Deep Forensics (`v3.3.1`)**, **Arquitetura AOT/PGO Nativa e Zero-Alloc (`v3.1.0`)**, **Motor Inteligente de Agressividade &amp; Autonomia de Bateria (`v3.1.0`)**, **Aceleração Hardware (GPU/AVX2/AVX-512) Universal (`v3.0.2`)**, **Gateway Dual IPv4/IPv6 Simultâneo (`v3.0.0`)**, **Terminal SSH Studio Ultra Fluido (`v2.2.9`)** e muito mais.
+Suíte Definitiva de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L2/L3 e Análise de Tráfego de Alta Performance — Otimizada em **.NET 10.0 Native/ReadyToRun WPF/Blazor Hybrid** com **Suíte de Temas Duplo (Dark Neon & Windows 11 Dark Fluent) (`v3.4.0`)**, **Módulo Forense Web 360° Deep Forensics (`v3.3.1`)**, **Arquitetura AOT/PGO Nativa e Zero-Alloc (`v3.1.0`)**, **Motor Inteligente de Agressividade &amp; Autonomia de Bateria (`v3.1.0`)**, **Aceleração Hardware (GPU/AVX2/AVX-512) Universal (`v3.0.2`)**, **Gateway Dual IPv4/IPv6 Simultâneo (`v3.0.0`)**, **Terminal SSH Studio Ultra Fluido (`v2.2.9`)** e muito mais.
 
 </div>
 
@@ -18,13 +18,14 @@ Suíte Definitiva de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L
 
 ## 🚀 Sobre o Projeto
 
-Desenvolvido por **Reginaldo Junior**, um Engenheiro de Redes com ampla experiência operacional que buscou criar uma alternativa moderna e acessível aos softwares tradicionais de mercado que costumam exigir modelos complexos de contratação. O **RezTerm** surge como uma plataforma autônoma e de alta performance para diagnóstico de conectividade, monitoramento e triagem forense, rodando diretamente no metal do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface corporativa de última geração em tecnologia Blazor Hybrid no padrão **Cyberpunk Dark Neon**, **Arquitetura AOT/PGO Nativa e Zero-Alloc (`v3.1.0`)**, **Controle de Agressividade &amp; Autonomia de Bateria (`v3.1.0`)**, **Hotfix GPU Universal (`v3.0.2`)**, **Inteligência Integral de Conectividade &amp; Anti-Oscilação (`v3.0.0`)**, **Triagem Ethernet L2 Customizável (`v3.0.0`)**, **Correção do Travamento Cisco Exit Lock no SSH (`v2.2.9`)**, **Responsividade Universal (`v3.0.0`)**, **Inteligência RF MESH / Repetidores (`v2.2.6`)** e o revolucionário **Motor Inteligente Anti-CoPP Rate-Limit 3 Fases**.
+Desenvolvido por **Reginaldo Junior**, um Engenheiro de Redes com ampla experiência operacional que buscou criar uma alternativa moderna e acessível aos softwares tradicionais de mercado que costumam exigir modelos complexos de contratação. O **RezTerm** surge como uma plataforma autônoma e de alta performance para diagnóstico de conectividade, monitoramento e triagem forense, rodando diretamente no metal do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface corporativa de última geração em tecnologia Blazor Hybrid no padrão **Cyberpunk Dark Neon & Windows 11 Dark Fluent (`v3.4.0`)**, **Arquitetura AOT/PGO Nativa e Zero-Alloc (`v3.1.0`)**, **Controle de Agressividade &amp; Autonomia de Bateria (`v3.1.0`)**, **Hotfix GPU Universal (`v3.0.2`)**, **Inteligência Integral de Conectividade &amp; Anti-Oscilação (`v3.0.0`)**, **Triagem Ethernet L2 Customizável (`v3.0.0`)**, **Correção do Travamento Cisco Exit Lock no SSH (`v2.2.9`)**, **Responsividade Universal (`v3.0.0`)**, **Inteligência RF MESH / Repetidores (`v2.2.6`)** e o revolucionário **Motor Inteligente Anti-CoPP Rate-Limit 3 Fases**.
 
 ---
 
-## 🔥 Novidades &amp; Otimizações — Versão `v3.3.1` (Agosto / 2026)
+## 🔥 Novidades &amp; Otimizações — Versão `v3.4.0` (Agosto / 2026)
 
-* **🌐 Módulo Web 360° Deep Forensics Suite (`v3.3.1`)**: Inspecção profunda L3-L7 com dissecação automática de CDNs e sub-recursos (JS, CSS, Fontes, Ads), sondagem Dual-Stack IPv4 vs IPv6 Happy Eyeballs (RFC 8305) com cálculo de penalidade de fallback, PMTU Sweep por CDN com flag DF em 1472-1280B e gerador de laudos técnicos em Markdown para chamados NOC/CGR.
+* **🎨 Suíte de Temas Duplo & Persistência de Preferências (`v3.4.0`)**: Motor gráfico com suporte a alternância instantânea entre os temas **Dark Neon (Cyberpunk)** e **Windows 11 Dark (Fluent Slate)**, persistência automática de escolhas no disco (`theme_prefs.json`) e `localStorage`, refatoração completa de UI/UX para notebooks de 13"/14" (1366x768 / 1080p @ 125%/150%), prevenção de vazamento de sparklines no Radar de Latência, alinhamento de badges no Terminal SSH e padronização dos módulos Graylog (Conexões Suspeitas & Mau Uso) e PCAP Forense.
+* **🌐 Módulo Web 360° Deep Forensics Suite (`v3.3.1`)**: Inspeção profunda L3-L7 com dissecação automática de CDNs e sub-recursos (JS, CSS, Fontes, Ads), sondagem Dual-Stack IPv4 vs IPv6 Happy Eyeballs (RFC 8305) com cálculo de penalidade de fallback, PMTU Sweep por CDN com flag DF em 1472-1280B e gerador de laudos técnicos em Markdown para chamados NOC/CGR.
 
 ---
 
