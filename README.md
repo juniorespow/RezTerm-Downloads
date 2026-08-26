@@ -1,4 +1,4 @@
-# ⚡ RezTerm v3.4.1 (Cyberpunk Network Engineer Toolkit & Forensics Suite)
+# ⚡ RezTerm v3.4.2 (Cyberpunk Network Engineer Toolkit & Forensics Suite)
 
 <div align="center">
 
@@ -10,7 +10,7 @@
 ![Hardware Acceleration](https://img.shields.io/badge/HW%20Acceleration-GPU%20%2B%20SIMD-00ff88?style=for-the-badge)
 ![RF Intelligence](https://img.shields.io/badge/RF%20Fluke%20Engine-MESH%20Triage-00f0ff?style=for-the-badge)
 
-Suíte Definitiva de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L2/L3 e Análise de Tráfego de Alta Performance — Otimizada em **.NET 10.0 Native/ReadyToRun WPF/Blazor Hybrid** com **Proteção contra Perda de Dados SSH/Graylog (`v3.4.1`)**, **Suíte de Temas Duplo (Dark Neon & Windows 11 Dark Fluent) (`v3.4.0`)**, **Módulo Forense Web 360° Deep Forensics (`v3.3.1`)**, **Arquitetura AOT/PGO Nativa e Zero-Alloc (`v3.1.0`)**, **Motor Inteligente de Agressividade &amp; Autonomia de Bateria (`v3.1.0`)**, **Aceleração Hardware (GPU/AVX2/AVX-512) Universal (`v3.0.2`)**, **Gateway Dual IPv4/IPv6 Simultâneo (`v3.0.0`)**, **Terminal SSH Studio Ultra Fluido (`v2.2.9`)** e muito mais.
+Suíte Definitiva de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L2/L3 e Análise de Tráfego de Alta Performance — Otimizada em **.NET 10.0 Native/ReadyToRun WPF/Blazor Hybrid** com **Live TCP/UDP Watcher 100% Local-First & Win32 Kernel I/O (`v3.4.2`)**, **Atualização de Segurança SSH.NET (`v2026.0.0`)**, **Rastreio Forense CGNAT Graylog Otimizado (`v3.4.1`)**, **Proteção contra Perda de Dados SSH/Graylog (`v3.4.1`)**, **Suíte de Temas Duplo (Dark Neon & Windows 11 Dark Fluent) (`v3.4.0`)**, **Módulo Forense Web 360° Deep Forensics (`v3.3.1`)** e muito mais.
 
 </div>
 
@@ -18,11 +18,11 @@ Suíte Definitiva de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L
 
 ## 🚀 Sobre o Projeto
 
-Desenvolvido por **Reginaldo Junior**, um Engenheiro de Redes com ampla experiência operacional que buscou criar uma alternativa moderna e acessível aos softwares tradicionais de mercado que costumam exigir modelos complexos de contratação. O **RezTerm** surge como uma plataforma autônoma e de alta performance para diagnóstico de conectividade, monitoramento e triagem forense, rodando diretamente no metal do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface corporativa de última geração em tecnologia Blazor Hybrid no padrão **Cyberpunk Dark Neon & Windows 11 Dark Fluent (`v3.4.0`)**, **Arquitetura AOT/PGO Nativa e Zero-Alloc (`v3.1.0`)**, **Controle de Agressividade &amp; Autonomia de Bateria (`v3.1.0`)**, **Hotfix GPU Universal (`v3.0.2`)**, **Inteligência Integral de Conectividade &amp; Anti-Oscilação (`v3.0.0`)**, **Triagem Ethernet L2 Customizável (`v3.0.0`)**, **Correção do Travamento Cisco Exit Lock no SSH (`v2.2.9`)**, **Responsividade Universal (`v3.0.0`)**, **Inteligência RF MESH / Repetidores (`v2.2.6`)** e o revolucionário **Motor Inteligente Anti-CoPP Rate-Limit 3 Fases**.
+Desenvolvido por **Reginaldo Junior**, um Engenheiro de Redes com ampla experiência operacional que buscou criar uma alternativa moderna e acessível aos softwares tradicionais de mercado que costumam exigir modelos complexos de contratação. O **RezTerm** surge como uma plataforma autônoma e de alta performance para diagnóstico de conectividade, monitoramento e triagem forense, rodando diretamente no metal do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface corporativa de última geração em tecnologia Blazor Hybrid no padrão **Cyberpunk Dark Neon & Windows 11 Dark Fluent (`v3.4.0`)**, **Live TCP/UDP Watcher Local-First & Win32 Process I/O (`v3.4.2`)**, **Arquitetura AOT/PGO Nativa e Zero-Alloc (`v3.1.0`)**, **Controle de Agressividade &amp; Autonomia de Bateria (`v3.1.0`)**, **Hotfix GPU Universal (`v3.0.2`)**, **Inteligência Integral de Conectividade &amp; Anti-Oscilação (`v3.0.0`)**, **Triagem Ethernet L2 Customizável (`v3.0.0`)**, **Correção do Travamento Cisco Exit Lock no SSH (`v2.2.9`)** e muito mais.
 
 ---
 
-## 🔥 Novidades &amp; Otimizações — Versão `v3.4.1` (Agosto / 2026)
+## 🔥 Novidades &amp; Otimizações — Versão `v3.4.2` (Agosto / 2026)
 
 * **⚡ Live TCP/UDP Watcher 100% Local-First & Win32 Kernel I/O (`v3.4.2`)**: Motor de monitoramento de tráfego de sockets reformulado para operação **100% Offline** via MaxMind GeoLite2 MMDB em modo `MemoryMappedFile` (latência de 0.001 ms e zero tráfego externo de fundo); Tabela completa de identificação de redes privadas/reservadas conforme RFCs IPv4 (RFC 1918, RFC 6598 CGNAT, RFC 3927 APIPA, RFC 2544 Benchmarking, RFC 5737 TEST-NET) e IPv6 (RFC 4291 Loopback/Link-Local/Multicast, RFC 4193 ULA, RFC 3849); Botão de atualização manual pontual (`🔄`) para IPs públicos; Medição REAL de throughput (Mbps/Kbps) via P/Invoke nativo `GetProcessIoCounters` (`kernel32.dll`) por PID do processo (capturando a taxa exata consumida pelo `msedge.exe`, `chrome.exe`, `steam.exe` em testes de velocidade) e Seletor de Filtro Rápido (`UN`, `LOCAL`, `PRIV`, `CGNAT`) na barra de busca.
 * **🛡️ Atualização de Segurança SSH.NET (`v2026.0.0`)**: Correção do aviso de segurança GHSA-q939-rpr3-3284 (Terrapin Attack CVE-2023-48795) com aperto de mão estrito (*Strict Key Exchange*).
