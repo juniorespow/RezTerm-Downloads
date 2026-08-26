@@ -10,7 +10,7 @@
 ![Hardware Acceleration](https://img.shields.io/badge/HW%20Acceleration-GPU%20%2B%20SIMD-00ff88?style=for-the-badge)
 ![RF Intelligence](https://img.shields.io/badge/RF%20Fluke%20Engine-MESH%20Triage-00f0ff?style=for-the-badge)
 
-Suíte Definitiva de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L2/L3 e Análise de Tráfego de Alta Performance — Otimizada em **.NET 10.0 Native/ReadyToRun WPF/Blazor Hybrid** com **Proteção contra Perda de Dados SSH/Graylog (`v3.4.1`)**, **Central de Configurações & Temas Dual (Dark Neon & Windows 11 Dark) (`v3.4.0`)**, **Telemetria OS Win32 Real & Motor Gráfico 60 FPS (`v3.4.0`)**, **Módulo Forense Web 360° Deep Forensics (`v3.3.1`)**, **Arquitetura AOT/PGO Nativa e Zero-Alloc (`v3.1.0`)**, **Motor Inteligente de Agressividade &amp; Autonomia de Bateria (`v3.1.0`)**, **Aceleração Hardware (GPU/AVX2/AVX-512) Universal (`v3.0.2`)**, **Gateway Dual IPv4/IPv6 Simultâneo (`v3.0.0`)**, **Terminal SSH Studio Ultra Fluido (`v2.2.9`)** e muito mais.
+Suíte Definitiva de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L2/L3 e Análise de Tráfego de Alta Performance — Otimizada em **.NET 10.0 Native/ReadyToRun WPF/Blazor Hybrid** com **Proteção contra Perda de Dados SSH/Graylog (`v3.4.1`)**, **Suíte de Temas Duplo (Dark Neon & Windows 11 Dark Fluent) (`v3.4.0`)**, **Módulo Forense Web 360° Deep Forensics (`v3.3.1`)**, **Arquitetura AOT/PGO Nativa e Zero-Alloc (`v3.1.0`)**, **Motor Inteligente de Agressividade &amp; Autonomia de Bateria (`v3.1.0`)**, **Aceleração Hardware (GPU/AVX2/AVX-512) Universal (`v3.0.2`)**, **Gateway Dual IPv4/IPv6 Simultâneo (`v3.0.0`)**, **Terminal SSH Studio Ultra Fluido (`v2.2.9`)** e muito mais.
 
 </div>
 
@@ -18,18 +18,22 @@ Suíte Definitiva de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L
 
 ## 🚀 Sobre o Projeto
 
-Desenvolvido por **Reginaldo Junior**, um Engenheiro de Redes com ampla experiência operacional que buscou criar uma alternativa moderna e acessível aos softwares tradicionais de mercado que costumam exigir modelos complexos de contratação. O **RezTerm** surge como uma plataforma autônoma e de alta performance para diagnóstico de conectividade, monitoramento e triagem forense, rodando diretamente no metal do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface corporativa de última geração em tecnologia Blazor Hybrid no padrão **Cyberpunk Dark Neon & Windows 11 Dark (`v3.4.0`)**, **Arquitetura AOT/PGO Nativa e Zero-Alloc (`v3.1.0`)**, **Controle de Agressividade &amp; Autonomia de Bateria (`v3.1.0`)**, **Hotfix GPU Universal (`v3.0.2`)**, **Inteligência Integral de Conectividade &amp; Anti-Oscilação (`v3.0.0`)**, **Triagem Ethernet L2 Customizável (`v3.0.0`)**, **Correção do Travamento Cisco Exit Lock no SSH (`v2.2.9`)**, **Responsividade Universal (`v3.0.0`)**, **Inteligência RF MESH / Repetidores (`v2.2.6`)** e o revolucionário **Motor Inteligente Anti-CoPP Rate-Limit 3 Fases**.
+Desenvolvido por **Reginaldo Junior**, um Engenheiro de Redes com ampla experiência operacional que buscou criar uma alternativa moderna e acessível aos softwares tradicionais de mercado que costumam exigir modelos complexos de contratação. O **RezTerm** surge como uma plataforma autônoma e de alta performance para diagnóstico de conectividade, monitoramento e triagem forense, rodando diretamente no metal do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface corporativa de última geração em tecnologia Blazor Hybrid no padrão **Cyberpunk Dark Neon & Windows 11 Dark Fluent (`v3.4.0`)**, **Arquitetura AOT/PGO Nativa e Zero-Alloc (`v3.1.0`)**, **Controle de Agressividade &amp; Autonomia de Bateria (`v3.1.0`)**, **Hotfix GPU Universal (`v3.0.2`)**, **Inteligência Integral de Conectividade &amp; Anti-Oscilação (`v3.0.0`)**, **Triagem Ethernet L2 Customizável (`v3.0.0`)**, **Correção do Travamento Cisco Exit Lock no SSH (`v2.2.9`)**, **Responsividade Universal (`v3.0.0`)**, **Inteligência RF MESH / Repetidores (`v2.2.6`)** e o revolucionário **Motor Inteligente Anti-CoPP Rate-Limit 3 Fases**.
 
 ---
 
 ## 🔥 Novidades &amp; Otimizações — Versão `v3.4.1` (Agosto / 2026)
 
+* **⚡ Live TCP/UDP Watcher 100% Local-First & Win32 Kernel I/O (`v3.4.2`)**: Motor de monitoramento de tráfego de sockets reformulado para operação **100% Offline** via MaxMind GeoLite2 MMDB em modo `MemoryMappedFile` (latência de 0.001 ms e zero tráfego externo de fundo); Tabela completa de identificação de redes privadas/reservadas conforme RFCs IPv4 (RFC 1918, RFC 6598 CGNAT, RFC 3927 APIPA, RFC 2544 Benchmarking, RFC 5737 TEST-NET) e IPv6 (RFC 4291 Loopback/Link-Local/Multicast, RFC 4193 ULA, RFC 3849); Botão de atualização manual pontual (`🔄`) para IPs públicos; Medição REAL de throughput (Mbps/Kbps) via P/Invoke nativo `GetProcessIoCounters` (`kernel32.dll`) por PID do processo (capturando a taxa exata consumida pelo `msedge.exe`, `chrome.exe`, `steam.exe` em testes de velocidade) e Seletor de Filtro Rápido (`UN`, `LOCAL`, `PRIV`, `CGNAT`) na barra de busca.
+* **🛡️ Atualização de Segurança SSH.NET (`v2026.0.0`)**: Correção do aviso de segurança GHSA-q939-rpr3-3284 (Terrapin Attack CVE-2023-48795) com aperto de mão estrito (*Strict Key Exchange*).
+* **🕵️ CGNAT Graylog Forensics Otimizado (`v3.4.1`)**: Cálculo prévio do início de bloco BPA ($\lfloor \text{porta} / 256 \rfloor \times 256$) na query Lucene (`nf_postnatportblockstart`), criptografia nativa Windows DPAPI (`DataProtectionScope.CurrentUser`) para tokens de API em `%LocalAppData%\RezTerm\graylog_servers.json`, discriminação de eventos NetFlow v9 IPFIX (`nf_field_230` / `nat_event`: 1 = CREATE, 2 = RELEASE) e paginação REST automática.
 * **🛡️ Blindagem & Preservação de Dados de Hosts SSH e Servidores Graylog (`v3.4.1`)**: Implementação de migração automática dual-location (`%AppData%\RezTerm` <-> `%LocalAppData%\RezTerm`) e cópias de segurança redundantes (`.bak`) na carga e gravação dos arquivos de persistência (`hosts.json`, `graylog_servers.json`, `ping_targets.json`, `snippets.json`), garantindo que atualizações de versão e descompactadores nunca excluam ou limpem os dados salvos pelo usuário.
-* **⚙️ Central de Configurações & Sistema (`⚙️ Configurações`) (`v3.4.0`)**: Centralização unificada na barra lateral com sub-abas de **Aparência & Estilo** (alternância dinâmica entre Dark Neon e Windows 11 Dark), **Motor & Performance** (Perfil Adaptativo Turbo vs Economia) e **Sobre & Licença** (detalhes da versão v3.4.0, HWID, licença e créditos).
+* **🎨 Suíte de Temas Duplo & Persistência de Preferências (`v3.4.0`)**: Motor gráfico com suporte a alternância instantânea entre os temas **Dark Neon (Cyberpunk)** e **Windows 11 Dark (Fluent Slate)**, persistência automática de escolhas no disco (`theme_prefs.json`) e `localStorage`, refatoração completa de UI/UX para notebooks de 13"/14" (1366x768 / 1080p @ 125%/150%), prevenção de vazamento de sparklines no Radar de Latência, alinhamento de badges no Terminal SSH e padronização dos módulos Graylog (Conexões Suspeitas & Mau Uso) e PCAP Forense.
+* **🌐 Módulo Web 360° Deep Forensics Suite (`v3.3.1`)**: Inspeção profunda L3-L7 com dissecação automática de CDNs e sub-recursos (JS, CSS, Fontes, Ads), sondagem Dual-Stack IPv4 vs IPv6 Happy Eyeballs (RFC 8305) com cálculo de penalidade de fallback, PMTU Sweep por CDN com flag DF em 1472-1280B e gerador de laudos técnicos em Markdown para chamados NOC/CGR.
 
 ---
 
-## 🛠️ 2. Suíte de Ferramentas Integradas (v3.3.1)
+## 🛠️ 2. Suíte de Ferramentas Integradas (v3.4.2)
 
 | Módulo | Descrição Principal | Destaques de Engenharia |
 | :--- | :--- | :--- |
@@ -37,13 +41,14 @@ Desenvolvido por **Reginaldo Junior**, um Engenheiro de Redes com ampla experiê
 | **📶 Wireless Tests RF (`v2.2.6`)** | Analisador de espectro Wi-Fi e qualidade de sinal em tempo real (Fluke AirCheck RF). | **Inteligência MESH / Zero Falsos Positivos (`v2.2.6`)**: Algoritmo que reconhece automaticamente redes MESH Wi-Fi (ex: TP-Link Deco, Google Wifi) e repetidores operando no mesmo SSID e Canal, excluindo-os da contagem de interferência co-canal (`CCI`) e separando redes concorrentes externas de nós cooperativos (`ConnectedMeshOrSiblingNodes`); **Modal Cyberpunk Interativo (`🚨 ABRIR LAUDO DE MELHORIAS`)** com tabela dedicada de **Topologia MESH / Multi-AP**, indicação do canal mais limpo do local (`GetBestRecommendedChannel`), recomendações de Band Steering para 5 GHz e auditoria de Fast Roaming 802.11k/v/r; **Auditoria IEEE Priorizada (`⭐ REDE CONECTADA`)** no topo da aba de boas práticas e **Responsividade Inteligente para Notebooks de 14" (`1366x768`)** na tabela de telemetria e no grid de canais. |
 | **📊 Dashboard & Latência (`v3.0.0`)** | Monitoramento em tempo real da saúde da conexão, dual-stack ISP e telemetria de Hardware. | **Inteligência Integral de Conectividade & Anti-Oscilação (`v3.0.0`)**: Varredura WMI/SIMD em 5 estados com purga instantânea na reconexão (`Zero Oscilação`), **Responsividade Cibernética Universal (`v3.0.0`)** no painel holográfico offline e sub-blocos, **HUD de Boot Atualizado** com legenda `NETWORK ENGINEER TOOLKIT // CYBERPUNK CORE`, **HotFix GPU Load (`v2.2.2`)** com suporte universal NVIDIA/Intel/AMD e exibição `0.0%` sem `N/A`, **Precisão Absoluta em Memória RAM (`GlobalMemoryStatusEx`)**, **Motor Híbrido Anti-CoPP Rate-Limit (TCP SYN Bypass em portas 80/443)** para evitar alarmes falsos de queda, Gateway Dual e Badge de Aceleração GPU/SIMD. |
 | **📡 Leitor PCAP Forense (`v2.1.0`)** | Analisador e dissecador forense de pacotes (.pcap/.pcapng) com aceleração SIMD e mapeamento no kernel. | **Motor Gráfico 60 FPS GPU Direct Canvas/WebGL (`pcap-cyberpunk-map.js`)** com luzes pulsantes esmaecendo e brilhando (*Breathing Neon Particles*), **Zoom/Pan com bloqueio nativo de rolagem da janela (`{passive: false}`)** e resiliência a abas; **Heurística de Redes, NOC e SOC** para 9 protocolos core (`BGP`, `OSPF`, `IS-IS`, `MPLS/VPLS`, `PPPoE`, `DHCP`, `IPv6 RA Guard`), inspeção interativa de quadros com Hex Dump e ASCII, botão de upload personalizado e popup de aviso forense. |
-| **💻 Terminal SSH Studio (`v2.2.9`)** | Client SSH multi-aba de alta performance com `xterm.js`. | **Correção do Bug de Travamento Cisco Exit Lock (`v2.2.9`)**: Desconexão instantânea e liberação limpa de PTY/ShellStream ao digitar `exit` em equipamentos Cisco, Huawei ou Datacom sem prender a aba; **Fluidez Extrema a 60 FPS** via debouncing buffer C# (16ms) e bypass streaming JS para comandos >12KB, **Sincronização Dinâmica SIGWINCH** (`htop`/`btop`), **Syntax Highlighting** e **Copiar Tudo Buffer**. |
+| **💻 Terminal SSH Studio (`v2.2.9`)** | Client SSH multi-aba de alta performance com `xterm.js`. | **Atualização de Segurança SSH.NET 2026.0.0**: Mitigação do ataque Terrapin (GHSA-q939-rpr3-3284); **Correção do Bug de Travamento Cisco Exit Lock (`v2.2.9`)**: Desconexão instantânea e liberação limpa de PTY/ShellStream ao digitar `exit` em equipamentos Cisco, Huawei ou Datacom sem prender a aba; **Fluidez Extrema a 60 FPS** via debouncing buffer C# (16ms) e bypass streaming JS para comandos >12KB, **Sincronização Dinâmica SIGWINCH** (`htop`/`btop`), **Syntax Highlighting** e **Copiar Tudo Buffer**. |
 | **🏓 Ping & Trace Suite (`v2.2.3`)** | Motores avançados de ICMP, Ping Contínuo, Cadeia Multi-Ping e MTR. | **Responsividade Inteligente no MTR Avançado (`v2.2.3`)**: Painel superior de controles reestruturado em grid flexível multi-linha com auto-escalonamento, garantindo que o campo **Destino (Host / IP / Domínio)** tenha largura generosa (`min-width: 240px`) e nunca fique cortado em telas de 14" (`1366x768`); **Motor Inteligente Anti-CoPP Rate-Limit 3 Fases (Heurística de Salto Intermediário vs Destino + Poisson Jittering + TCP SYN Bypass)** com selo azul neon **`⚡ CoPP BYPASS`**, **Cadeia Multi-Ping** com laudo formatado, **Seletor de Pilha IP (IPv4/IPv6/Auto)** e **Cálculo de Jitter RFC 3393** isolado no MTR. |
 | **📡 IP Scan & Port Scanner SIMD (`v2.1.1`)** | Varredura minuciosa de sub-redes locais e auditoria forense de portas (`Port Scanner SIMD Pro v2.2`). | **Aceleração SIMD Multi-Core Paralela** (até 1.500 threads com *throttling* adaptativo de rede), **Eliminação de Falsos Positivos UDP via Sondas Ativas de Payload** (DNS, NTP, SNMP, SIP + detecção de ICMP Port Unreachable), **Deep Banner Grabbing & Inspeção TLS Forense** com captura de certificado X.509, **Triage de Risco SOC (`Crítico/Alto/Normal`)** com notas de mitigação e **Hex Dump Preview Raw**, além de exportação de laudos CSV em tempo real via **`rezTermFileSave`**. |
-| **⚡ Live TCP/UDP Watcher** | Monitoramento de sockets abertos e conexões ativas no Windows. | Integração nativa com **GeoLite2 MMDB em Memória (MMF)** projetando conexões em **Mapa Mundi interativo**. |
+| **⚡ Live TCP/UDP Watcher (`v3.4.2`)** | Monitoramento de sockets abertos e conexões ativas no Windows. | **Resolução 100% Offline** via MaxMind GeoLite2 MMDB em modo `MemoryMappedFile` (Zero tráfego e 0.001 ms de latência); **Identificação de Redes Privadas por RFC** (RFC 1918, RFC 6598 CGNAT, RFC 3927 APIPA, RFC 2544, RFC 4291 IPv6); **Botão de Atualização Manual Ondemand (`🔄`)** para IPs públicos; **Medição Real de Throughput (Mbps)** via P/Invoke nativo Kernel Win32 `GetProcessIoCounters` e **Seletor de Filtro Rápido (`UN`, `LOCAL`, `PRIV`, `CGNAT`)**. |
 | **🌐 NetOps & Whois/IRR** | Consulta unificada a bases mundiais de registro de IPs e ASNs. | Conectores diretos para RADB, RIPE, LACNIC, ARIN, APNIC e AFRINIC com formatação de blocos BGP. |
 | **🔌 Ethernet Tests L2 (`v3.0.0`)** | Verdadeiro "Fluke de Software" operando na Camada de Enlace (L2). | Escuta passiva LLDP/CDP/MNDP, injeção ativa de **PADI Broadcast (PPPoE Rogue)**, **DHCP Discover**, verificação interativa de **Porta Trunk vs Access com VLAN Específica (`v3.0.0`)** e motor customizável com barra de progresso sincronizada (até 60s). |
-| **🕵️ Rastreio Forense CGNAT** | Investigação forense em servidores Graylog com geração de relatórios. | **Aceleração Vetorial SIMD AVX2/AVX-512 Paralela** (até 250x mais rápido), **Modo Híbrido Bimodal**, cálculo de blocos **Cisco BPA (RFC 6598)** e exportação em PDF/TXT com cláusulas jurídicas e hash SHA-256. |
+| **🕵️ Rastreio Forense CGNAT (`v3.4.1`)** | Investigação forense em servidores Graylog com geração de relatórios. | **Otimização Lucene BPA `blockStart`**, **Criptografia Windows DPAPI**, discriminação de eventos **NetFlow v9 IPFIX (`nf_field_230`: 1 = CREATE, 2 = RELEASE)**, **Aceleração SIMD AVX2/AVX-512**, cálculo de blocos Cisco BPA (RFC 6598) e exportação em PDF/TXT com cláusulas jurídicas e hash SHA-256. |
+| **📡 Suíte SNMP & Observabilidade (`v3.4.1 BETA`)** | MIB Browser AST, varredura resiliente e gerador de observabilidade Zabbix/Prometheus. | **Compilador AST ASN.1 2-Passes** (SMIv1/v2 com resolução em grafo de dependências), **Motor Resiliente `WalkLoopResilient`** em `GetNext` sequencial (leitura 100% em OLTs TP-Link, MikroTik, FiberHome, ZTE sem corte em saltos não-contíguos), **Grade Tabular Persistente** com exportação CSV/JSON, **Gerador de Templates Zabbix 6.0/7.0 (LLD)** e **Prometheus snmp.yml (BETA)**, **Decodificador Óptico SFP/DWDM (dBm)**, **Quick Health Audit** e **Flag de Auto-Geração com Auto-Detecção de Modelo via `sysDescr`**. |
 
 ---
 
@@ -65,31 +70,32 @@ Para proteger a propriedade intelectual corporativa e evitar a distribuição n�
 
 ---
 
-## 🕵️ 4. Módulo Forense & Rastreio CGNAT (Graylog)
+## 4. Módulo Forense & Rastreio CGNAT (Graylog)
 
-O **RezTerm** integra um motor de busca forense desenvolvido especificamente para analistas de segurança investigarem conexões criminosas ou incidentes cibernéticos através de logs de CGNAT centralizados em clusters **Graylog**.
+O RezTerm possui um motor de busca forense desenvolvido para investigação de conexões em servidores Graylog (v4.2.x e v5.x / OpenSearch) para automação de respostas a requisições judiciais e periciais de CGNAT Determinístico / Bulk Port Allocation (Cisco BPA - RFC 6598).
 
-### 📋 Passo a Passo: Como Configurar o Graylog no RezTerm
+### 4.1 Passo a Passo de Configuração de Servidores
 
-1. **Acessar o Módulo**: No menu lateral esquerdão do RezTerm, clique na aba **"🕵️ Graylog (CGNAT Forense)"**.
-2. **Gerenciamento de Servidores**: No topo da tela, clique no botão **"⚙️ Gerenciar Servidores Graylog"**.
-3. **Cadastrar Novo Cluster**: Clique em **"➕ Novo Servidor"** e preencha os parâmetros do nó Graylog:
-   * **Nome Identificador**: Ex: `Cluster Graylog - Core Datacenter SP`.
-   * **Hostname ou IP**: Ex: `graylog.provedor.intranet` ou `10.10.50.15`.
-   * **Porta REST API**: Padrão `9000` (ou `443` se estiver atrás de reverse proxy HTTPS).
-   * **API Key / Token**: Gere uma API Key com permissão de leitura (`read:messages`) no painel web do Graylog (*System -> Users -> Create API Token*) e cole no RezTerm. A chave será armazenada de forma criptografada pelo sistema.
-   * **Compatibilidade de Versão**: Selecione o motor correspondente ao seu parque:
-     * `v4.x Legado`: Para servidores Graylog nas séries 4.0, 4.1 e 4.2.
-     * `v5.x Moderno`: Para versões Graylog 5.0+ e Opensearch 2.x.
-4. **Testar & Ativar**: Clique em **Salvar**. O RezTerm validará a conectividade. Se bem-sucedido, selecione o servidor na lista para iniciar as investigações.
+1. **Acessar o Módulo**: No menu lateral do RezTerm, selecione a aba **Graylog (CGNAT Forense)**.
+2. **Gerenciamento de Servidores**: Clique na opção **Gerenciar Servidores Graylog**.
+3. **Cadastrar Novo Cluster**: Clique em **Novo Servidor** e informe os parâmetros:
+   * **Nome Identificador**: Identificação técnica do nó (ex: `Cluster Graylog Core SP`).
+   * **Hostname ou IP**: Endereço FQDN ou IP do servidor.
+   * **Porta REST API**: Porta de comunicação (Padrão 9000 para HTTP ou 443 para HTTPS).
+   * **API Key / Token**: Token de API gerado no Graylog com permissão de leitura (`read:messages`). O token é armazenado no disco local com criptografia nativa **Windows DPAPI** (`DataProtectionScope.CurrentUser`).
+   * **Versão do Graylog**: Seleção entre `v4.x Legado` e `v5.x Moderno`.
+4. **Validação**: Clique em **Salvar**. O sistema executará um teste de conectividade REST e ativará o nó.
 
-### 🔍 Executando Rastreios Forenses com Conformidade Jurídica
-* **Busca Cirúrgica por IP/Porta**: Informe o IP Público, Porta de Origem (opcional) e a Data/Hora exata do fato. O motor compõe automaticamente a query Lucene estrita (`nf_proto: "6" AND nf_xlate_src_addr_ipv4: "..." AND nf_postnatportblockstart: "..."`).
-* **Extração Jurídica (PDF & TXT)**: Ao clicar em **"📄 Exportar Laudo Forense PDF"** ou **"📋 Exportar TXT"**, o sistema abre a janela de escolha de pastas do Windows (`SaveFileDialog`) e gera um laudo forense profissional contendo:
-  * Cabeçalho institucional do provedor/empresa e dados do analista responsável.
-  * **Cláusula de Conformidade com o Marco Civil da Internet (Lei nº 12.965/2014 - Art. 15)** justificando a preservação e extração legal de dados de conexão.
-  * **Cláusula de Proteção de Dados (LGPD - Lei nº 13.709/2018 - Art. 7º, VI e IX)** assegurando o tratamento para exercício regular de direitos em processo judicial ou legítimo interesse na segurança da rede.
-  * **Hash Criptográfico de Integridade (SHA-256)** gerado a partir do conteúdo exato dos logs extraídos para blindagem probatória em tribunais.
+### 4.2 Arquitetura da Consulta Forense e Otimização Lucene
+
+* **Cálculo Prévio de Bloco BPA (Cisco / NetFlow v9 IPFIX)**: Antes de submeter a requisição, o sistema calcula o início exato do bloco de portas ($\lfloor \text{porta} / 256 \rfloor \times 256$) e constrói a sintaxe Lucene estrita:
+  ```text
+  (nf_xlate_src_addr_ipv4: "45.237.200.240") AND (nf_postnatportblockstart: "64512" OR nf_xlate_src_port: "64616" OR nf_src_port: "64616")
+  ```
+  Isso transfere a filtragem para os índices do Elasticsearch/OpenSearch, evitando a exaustão do limite da API (`limit=1000`) em horários de pico.
+* **Discriminação de Eventos NAT (`nf_field_230`)**: Interpretação do campo de evento NetFlow v9 IPFIX (`1 = ALLOCATE / CREATE`, `2 = RELEASE / DELETE`), estabelecendo a linha do tempo exata de atribuição e liberação do bloco por assinante.
+* **Ordenação e Paginação REST**: Requisições ordenadas por `&sort=timestamp:asc` com paginação automática via `offset` para suporte a grandes volumes de dados.
+* **Laudos Técnicos (PDF & TXT)**: Geração de relatórios com hashes SHA-256 e enquadramento jurídico no Marco Civil da Internet (Lei 12.965/2014 - Art. 15) e LGPD (Lei 13.709/2018 - Art. 7º).
 
 ---
 
