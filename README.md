@@ -1,4 +1,4 @@
-# ⚡ RezTerm v3.4.2 (Cyberpunk Network Engineer Toolkit & Forensics Suite)
+# RezTerm v3.4.3 (Cyberpunk Network Engineer Toolkit & Forensics Suite)
 
 <div align="center">
 
@@ -8,177 +8,126 @@
 ![C#](https://img.shields.io/badge/C%23%2013-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![Security](https://img.shields.io/badge/Security-DPAPI%20%2B%20HMAC-00f0ff?style=for-the-badge)
 ![Hardware Acceleration](https://img.shields.io/badge/HW%20Acceleration-GPU%20%2B%20SIMD-00ff88?style=for-the-badge)
-![RF Intelligence](https://img.shields.io/badge/RF%20Fluke%20Engine-MESH%20Triage-00f0ff?style=for-the-badge)
 
-Suíte Definitiva de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L2/L3 e Análise de Tráfego de Alta Performance — Otimizada em **.NET 10.0 Native/ReadyToRun WPF/Blazor Hybrid** com **Live TCP/UDP Watcher 100% Local-First & Win32 Kernel I/O (`v3.4.2`)**, **Atualização de Segurança SSH.NET (`v2026.0.0`)**, **Rastreio Forense CGNAT Graylog Otimizado (`v3.4.1`)**, **Proteção contra Perda de Dados SSH/Graylog (`v3.4.1`)**, **Suíte de Temas Duplo (Dark Neon & Windows 11 Dark Fluent) (`v3.4.0`)**, **Módulo Forense Web 360° Deep Forensics (`v3.3.1`)** e muito mais.
+Plataforma Unificada de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L2/L7 e Análise de Tráfego de Alta Performance — Compilada em **.NET 10.0 ReadyToRun WPF / Blazor Hybrid** com **Módulo ICMP Discovery & Path Audit (`v3.4.3`)**, **Live TCP/UDP Watcher Local-First (`v3.4.2`)**, **Atualização de Segurança SSH.NET (`v2026.0.0`)**, **Rastreio Forense CGNAT Graylog (`v3.4.1`)** e **Suíte de Temas Duplo (Dark Neon & Windows 11 Dark Fluent)**.
 
 </div>
 
 ---
 
-## 🚀 Sobre o Projeto
+## 1. Visão Geral Corporativa & Engenharia
 
-Desenvolvido por **Reginaldo Junior**, um Engenheiro de Redes com ampla experiência operacional que buscou criar uma alternativa moderna e acessível aos softwares tradicionais de mercado que costumam exigir modelos complexos de contratação. O **RezTerm** surge como uma plataforma autônoma e de alta performance para diagnóstico de conectividade, monitoramento e triagem forense, rodando diretamente no metal do Windows (.NET 10 WPF / ReadyToRun Native) com uma interface corporativa de última geração em tecnologia Blazor Hybrid no padrão **Cyberpunk Dark Neon & Windows 11 Dark Fluent (`v3.4.0`)**, **Live TCP/UDP Watcher Local-First & Win32 Process I/O (`v3.4.2`)**, **Arquitetura AOT/PGO Nativa e Zero-Alloc (`v3.1.0`)**, **Controle de Agressividade &amp; Autonomia de Bateria (`v3.1.0`)**, **Hotfix GPU Universal (`v3.0.2`)**, **Inteligência Integral de Conectividade &amp; Anti-Oscilação (`v3.0.0`)**, **Triagem Ethernet L2 Customizável (`v3.0.0`)**, **Correção do Travamento Cisco Exit Lock no SSH (`v2.2.9`)** e muito mais.
+O **RezTerm** é uma suíte integrada de engenharia de redes projetada para atender aos requisitos operacionais do Centro de Gerenciamento de Redes (CGR), Network Operations Center (NOC) e Security Operations Center (SOC). O sistema foi concebido para substituir a fragmentação de ferramentas legadas de mercado (como Wireshark, PuTTY, MTR, SolarWinds, PRTG, Nmap e utilitários auxiliares) por um ambiente unificado de altíssima performance executado diretamente no metal do Windows OS.
 
----
-
-## 🔥 Novidades &amp; Otimizações — Versão `v3.4.2` (Agosto / 2026)
-
-* **⚡ Live TCP/UDP Watcher 100% Local-First & Win32 Kernel I/O (`v3.4.2`)**: Motor de monitoramento de tráfego de sockets reformulado para operação **100% Offline** via MaxMind GeoLite2 MMDB em modo `MemoryMappedFile` (latência de 0.001 ms e zero tráfego externo de fundo); Tabela completa de identificação de redes privadas/reservadas conforme RFCs IPv4 (RFC 1918, RFC 6598 CGNAT, RFC 3927 APIPA, RFC 2544 Benchmarking, RFC 5737 TEST-NET) e IPv6 (RFC 4291 Loopback/Link-Local/Multicast, RFC 4193 ULA, RFC 3849); Botão de atualização manual pontual (`🔄`) para IPs públicos; Medição REAL de throughput (Mbps/Kbps) via P/Invoke nativo `GetProcessIoCounters` (`kernel32.dll`) por PID do processo (capturando a taxa exata consumida pelo `msedge.exe`, `chrome.exe`, `steam.exe` em testes de velocidade) e Seletor de Filtro Rápido (`UN`, `LOCAL`, `PRIV`, `CGNAT`) na barra de busca.
-* **🛡️ Atualização de Segurança SSH.NET (`v2026.0.0`)**: Correção do aviso de segurança GHSA-q939-rpr3-3284 (Terrapin Attack CVE-2023-48795) com aperto de mão estrito (*Strict Key Exchange*).
-* **🕵️ CGNAT Graylog Forensics Otimizado (`v3.4.1`)**: Cálculo prévio do início de bloco BPA ($\lfloor \text{porta} / 256 \rfloor \times 256$) na query Lucene (`nf_postnatportblockstart`), criptografia nativa Windows DPAPI (`DataProtectionScope.CurrentUser`) para tokens de API em `%LocalAppData%\RezTerm\graylog_servers.json`, discriminação de eventos NetFlow v9 IPFIX (`nf_field_230` / `nat_event`: 1 = CREATE, 2 = RELEASE) e paginação REST automática.
-* **🛡️ Blindagem & Preservação de Dados de Hosts SSH e Servidores Graylog (`v3.4.1`)**: Implementação de migração automática dual-location (`%AppData%\RezTerm` <-> `%LocalAppData%\RezTerm`) e cópias de segurança redundantes (`.bak`) na carga e gravação dos arquivos de persistência (`hosts.json`, `graylog_servers.json`, `ping_targets.json`, `snippets.json`), garantindo que atualizações de versão e descompactadores nunca excluam ou limpem os dados salvos pelo usuário.
-* **🎨 Suíte de Temas Duplo & Persistência de Preferências (`v3.4.0`)**: Motor gráfico com suporte a alternância instantânea entre os temas **Dark Neon (Cyberpunk)** e **Windows 11 Dark (Fluent Slate)**, persistência automática de escolhas no disco (`theme_prefs.json`) e `localStorage`, refatoração completa de UI/UX para notebooks de 13"/14" (1366x768 / 1080p @ 125%/150%), prevenção de vazamento de sparklines no Radar de Latência, alinhamento de badges no Terminal SSH e padronização dos módulos Graylog (Conexões Suspeitas & Mau Uso) e PCAP Forense.
-* **🌐 Módulo Web 360° Deep Forensics Suite (`v3.3.1`)**: Inspeção profunda L3-L7 com dissecação automática de CDNs e sub-recursos (JS, CSS, Fontes, Ads), sondagem Dual-Stack IPv4 vs IPv6 Happy Eyeballs (RFC 8305) com cálculo de penalidade de fallback, PMTU Sweep por CDN com flag DF em 1472-1280B e gerador de laudos técnicos em Markdown para chamados NOC/CGR.
+A arquitetura combina a capacidade de baixo nível do .NET 10 (acesso a sockets brutos, P/Invoke Win32, contadores de desempenho de kernel e chamadas de API do sistema operacional) com a flexibilidade gráfica do Blazor Hybrid renderizado via WebView2 com aceleração por hardware (GPU DirectComposition).
 
 ---
 
-## 🛠️ 2. Suíte de Ferramentas Integradas (v3.4.2)
+## 2. Novidades & Otimizações — Versão v3.4.3 (Agosto / 2026)
 
-| Módulo | Descrição Principal | Destaques de Engenharia |
-| :--- | :--- | :--- |
-| **🌐 Web 360° (`v3.3.1`)** | Inspecção e diagnóstico forense de desempenho web e trânsito IP de L3 a L7. | **DOM Harvester de CDNs**: Extração profunda de sub-recursos externos (JS, CSS, Fontes, Ads) no HTML raiz; **Dual-Stack Probe (RFC 8305)**: Medição IPv4 vs IPv6 com cálculo de penalidade Happy Eyeballs em ms; **PMTU DF-Bit Sweep por CDN** (1472 a 1280 bytes); **Health Score Baseado na Experiência Real** e **Gerador de Laudos Técnicos NOC/CGR em 1-Clique**. |
-| **📶 Wireless Tests RF (`v2.2.6`)** | Analisador de espectro Wi-Fi e qualidade de sinal em tempo real (Fluke AirCheck RF). | **Inteligência MESH / Zero Falsos Positivos (`v2.2.6`)**: Algoritmo que reconhece automaticamente redes MESH Wi-Fi (ex: TP-Link Deco, Google Wifi) e repetidores operando no mesmo SSID e Canal, excluindo-os da contagem de interferência co-canal (`CCI`) e separando redes concorrentes externas de nós cooperativos (`ConnectedMeshOrSiblingNodes`); **Modal Cyberpunk Interativo (`🚨 ABRIR LAUDO DE MELHORIAS`)** com tabela dedicada de **Topologia MESH / Multi-AP**, indicação do canal mais limpo do local (`GetBestRecommendedChannel`), recomendações de Band Steering para 5 GHz e auditoria de Fast Roaming 802.11k/v/r; **Auditoria IEEE Priorizada (`⭐ REDE CONECTADA`)** no topo da aba de boas práticas e **Responsividade Inteligente para Notebooks de 14" (`1366x768`)** na tabela de telemetria e no grid de canais. |
-| **📊 Dashboard & Latência (`v3.0.0`)** | Monitoramento em tempo real da saúde da conexão, dual-stack ISP e telemetria de Hardware. | **Inteligência Integral de Conectividade & Anti-Oscilação (`v3.0.0`)**: Varredura WMI/SIMD em 5 estados com purga instantânea na reconexão (`Zero Oscilação`), **Responsividade Cibernética Universal (`v3.0.0`)** no painel holográfico offline e sub-blocos, **HUD de Boot Atualizado** com legenda `NETWORK ENGINEER TOOLKIT // CYBERPUNK CORE`, **HotFix GPU Load (`v2.2.2`)** com suporte universal NVIDIA/Intel/AMD e exibição `0.0%` sem `N/A`, **Precisão Absoluta em Memória RAM (`GlobalMemoryStatusEx`)**, **Motor Híbrido Anti-CoPP Rate-Limit (TCP SYN Bypass em portas 80/443)** para evitar alarmes falsos de queda, Gateway Dual e Badge de Aceleração GPU/SIMD. |
-| **📡 Leitor PCAP Forense (`v2.1.0`)** | Analisador e dissecador forense de pacotes (.pcap/.pcapng) com aceleração SIMD e mapeamento no kernel. | **Motor Gráfico 60 FPS GPU Direct Canvas/WebGL (`pcap-cyberpunk-map.js`)** com luzes pulsantes esmaecendo e brilhando (*Breathing Neon Particles*), **Zoom/Pan com bloqueio nativo de rolagem da janela (`{passive: false}`)** e resiliência a abas; **Heurística de Redes, NOC e SOC** para 9 protocolos core (`BGP`, `OSPF`, `IS-IS`, `MPLS/VPLS`, `PPPoE`, `DHCP`, `IPv6 RA Guard`), inspeção interativa de quadros com Hex Dump e ASCII, botão de upload personalizado e popup de aviso forense. |
-| **💻 Terminal SSH Studio (`v2.2.9`)** | Client SSH multi-aba de alta performance com `xterm.js`. | **Atualização de Segurança SSH.NET 2026.0.0**: Mitigação do ataque Terrapin (GHSA-q939-rpr3-3284); **Correção do Bug de Travamento Cisco Exit Lock (`v2.2.9`)**: Desconexão instantânea e liberação limpa de PTY/ShellStream ao digitar `exit` em equipamentos Cisco, Huawei ou Datacom sem prender a aba; **Fluidez Extrema a 60 FPS** via debouncing buffer C# (16ms) e bypass streaming JS para comandos >12KB, **Sincronização Dinâmica SIGWINCH** (`htop`/`btop`), **Syntax Highlighting** e **Copiar Tudo Buffer**. |
-| **🏓 Ping & Trace Suite (`v2.2.3`)** | Motores avançados de ICMP, Ping Contínuo, Cadeia Multi-Ping e MTR. | **Responsividade Inteligente no MTR Avançado (`v2.2.3`)**: Painel superior de controles reestruturado em grid flexível multi-linha com auto-escalonamento, garantindo que o campo **Destino (Host / IP / Domínio)** tenha largura generosa (`min-width: 240px`) e nunca fique cortado em telas de 14" (`1366x768`); **Motor Inteligente Anti-CoPP Rate-Limit 3 Fases (Heurística de Salto Intermediário vs Destino + Poisson Jittering + TCP SYN Bypass)** com selo azul neon **`⚡ CoPP BYPASS`**, **Cadeia Multi-Ping** com laudo formatado, **Seletor de Pilha IP (IPv4/IPv6/Auto)** e **Cálculo de Jitter RFC 3393** isolado no MTR. |
-| **📡 IP Scan & Port Scanner SIMD (`v2.1.1`)** | Varredura minuciosa de sub-redes locais e auditoria forense de portas (`Port Scanner SIMD Pro v2.2`). | **Aceleração SIMD Multi-Core Paralela** (até 1.500 threads com *throttling* adaptativo de rede), **Eliminação de Falsos Positivos UDP via Sondas Ativas de Payload** (DNS, NTP, SNMP, SIP + detecção de ICMP Port Unreachable), **Deep Banner Grabbing & Inspeção TLS Forense** com captura de certificado X.509, **Triage de Risco SOC (`Crítico/Alto/Normal`)** com notas de mitigação e **Hex Dump Preview Raw**, além de exportação de laudos CSV em tempo real via **`rezTermFileSave`**. |
-| **⚡ Live TCP/UDP Watcher (`v3.4.2`)** | Monitoramento de sockets abertos e conexões ativas no Windows. | **Resolução 100% Offline** via MaxMind GeoLite2 MMDB em modo `MemoryMappedFile` (Zero tráfego e 0.001 ms de latência); **Identificação de Redes Privadas por RFC** (RFC 1918, RFC 6598 CGNAT, RFC 3927 APIPA, RFC 2544, RFC 4291 IPv6); **Botão de Atualização Manual Ondemand (`🔄`)** para IPs públicos; **Medição Real de Throughput (Mbps)** via P/Invoke nativo Kernel Win32 `GetProcessIoCounters` e **Seletor de Filtro Rápido (`UN`, `LOCAL`, `PRIV`, `CGNAT`)**. |
-| **🌐 NetOps & Whois/IRR** | Consulta unificada a bases mundiais de registro de IPs e ASNs. | Conectores diretos para RADB, RIPE, LACNIC, ARIN, APNIC e AFRINIC com formatação de blocos BGP. |
-| **🔌 Ethernet Tests L2 (`v3.0.0`)** | Verdadeiro "Fluke de Software" operando na Camada de Enlace (L2). | Escuta passiva LLDP/CDP/MNDP, injeção ativa de **PADI Broadcast (PPPoE Rogue)**, **DHCP Discover**, verificação interativa de **Porta Trunk vs Access com VLAN Específica (`v3.0.0`)** e motor customizável com barra de progresso sincronizada (até 60s). |
-| **🕵️ Rastreio Forense CGNAT (`v3.4.1`)** | Investigação forense em servidores Graylog com geração de relatórios. | **Otimização Lucene BPA `blockStart`**, **Criptografia Windows DPAPI**, discriminação de eventos **NetFlow v9 IPFIX (`nf_field_230`: 1 = CREATE, 2 = RELEASE)**, **Aceleração SIMD AVX2/AVX-512**, cálculo de blocos Cisco BPA (RFC 6598) e exportação em PDF/TXT com cláusulas jurídicas e hash SHA-256. |
-| **📡 Suíte SNMP & Observabilidade (`v3.4.1 BETA`)** | MIB Browser AST, varredura resiliente e gerador de observabilidade Zabbix/Prometheus. | **Compilador AST ASN.1 2-Passes** (SMIv1/v2 com resolução em grafo de dependências), **Motor Resiliente `WalkLoopResilient`** em `GetNext` sequencial (leitura 100% em OLTs TP-Link, MikroTik, FiberHome, ZTE sem corte em saltos não-contíguos), **Grade Tabular Persistente** com exportação CSV/JSON, **Gerador de Templates Zabbix 6.0/7.0 (LLD)** e **Prometheus snmp.yml (BETA)**, **Decodificador Óptico SFP/DWDM (dBm)**, **Quick Health Audit** e **Flag de Auto-Geração com Auto-Detecção de Modelo via `sysDescr`**. |
+* **ICMP Network Discovery & Path Audit (`v3.4.3`)**: Submódulo avançado para varredura massiva paralela em sub-redes IPv4 baseada em `System.Threading.Channels` (suporte a até 256 threads simultâneas sem contenção de memória). Executa auditoria automática de **Path MTU (PMTU)** via varredura com bit DF (*DontFragment*) ativado em amostragem binária (1500 B a 1280 B), calcula o **MSS Estimado** ($\text{MTU} - 40$), estima a distância de saltos (**Hop Count**) via TTL de resposta ($64 - \text{TTL}$, $128 - \text{TTL}$, $255 - \text{TTL}$), realiza validação rigorosa de sintaxe CIDR (`IsValidIpv4Cidr`) com alerta informativo de formatação e permite exportação em 1-clique para laudos Markdown e relatórios CSV.
+* **Live TCP/UDP Watcher 100% Local-First (`v3.4.2`)**: Sistema de monitoramento de sockets abertos do Windows OS com resolução geográfica 100% offline via MaxMind GeoLite2 MMDB em memória mapeada (`MemoryMappedFile`), eliminando tráfego de fundo. Classifica automaticamente redes reservadas e privadas conforme as RFCs aplicáveis (RFC 1918, RFC 6598, RFC 3927, RFC 2544, RFC 5737, RFC 4291 e RFC 4193). Medição real de vazão por processo via P/Invoke nativo Kernel Win32 (`GetProcessIoCounters`).
+* **Resolução de Nomes & RFCs no NetOps & IRR (`v3.4.2`)**: Otimização no conector de consultas BGP para utilizar o primeiro IP utilizável do bloco (`.1`) em vez do IP de rede (`.0`), garantindo 100% de acurácia na geolocalização MaxMind e APIs remotas. Ocultamento de dados sensíveis de servidores RPKI (Routinator).
+* **Mitigação Terrapin Attack SSH.NET (`v2026.0.0`)**: Atualização dos algoritmos de aperto de mão estrito (*Strict Key Exchange*) para neutralizar a vulnerabilidade CVE-2023-48795 (GHSA-q939-rpr3-3284).
+* **CGNAT Graylog Forensics Otimizado (`v3.4.1`)**: Otimização de consultas Lucene via pré-cálculo de início de bloco BPA ($\lfloor \text{porta} / 256 \rfloor \times 256$), suporte a eventos NetFlow v9 IPFIX (`nf_field_230`: 1 = CREATE, 2 = RELEASE) e criptografia Windows DPAPI (`DataProtectionScope.CurrentUser`) para armazenamento seguro de credenciais.
 
 ---
 
-## 🔑 3. Sistema de Licenciamento Criptográfico e Controle de Acesso
+## 3. Módulos Técnicos e RFCs Aplicadas
 
-Para proteger a propriedade intelectual corporativa e evitar a distribuição não autorizada da suíte de ferramentas de alta capacidade, o **RezTerm** implementa um controle rigoroso de licenciamento offline vinculado ao hardware:
+### 3.1 ICMP Discovery & Path Audit
+* **Especificação Técnica**: Motor de varredura massiva paralelo que dispara pulsos ICMP Echo Request para sub-redes IPv4 (ex: `/24`, `/22`, `/16`). Utiliza `System.Threading.Channels` com concorrência regulável (32 a 256 workers) e renderização de resultados em tabela virtualizada Blazor (`<Virtualize>`).
+* **Auditoria PMTU & MSS**: Envio de datagramas com a flag DF (*DontFragment* = 1) conforme a **RFC 1191**. Executa varredura binária para identificar o menor MTU suportado pelo caminho de rede sem fragmentação.
+* **RFCs Relacionadas**:
+  * **RFC 792**: Internet Control Message Protocol (ICMP Specification).
+  * **RFC 1191**: Path MTU Discovery.
+  * **RFC 791**: Internet Protocol (IPv4 Specification).
 
-* **Autenticação Vinculada ao Hardware (HWID)**: O sistema gera um código único e intransferível de 12 caracteres (ex: `REZ-8F9A-2B1C-4D5E`) computado via hash criptográfico SHA-256 a partir do `MachineGuid` e da assinatura de CPU/Placa-mãe do PC ou Notebook do analista.
-* **Chaves Corporativas HMAC-SHA256**: A licença não funciona por simples verificação de texto, mas sim por assinatura criptográfica **HMAC-SHA256** utilizando um segredo mestre de 256 bits (`MasterSecret`). Qualquer tentativa de adulteração do arquivo `license.json` ou da data de validade invalida a chave instantaneamente.
-* **Fluxo para o Usuário (Analista/HelpDesk)**:
-  1. Ao iniciar o `RezTerm.exe`, o sistema abre em **Tela Cheia Maximizada** e exibe a tela modal de bloqueio **🔒 RezTerm Corporativo - Licença Requerida**.
-  2. O técnico clica em **`[ Copiar meu HWID e Solicitar Licença ]`** e envia o código para a gestão do sistema.
-  3. Com a chave recebida, o técnico cola no campo e clica em **Ativar e Desbloquear Sistema**.
-  4. O status fica sempre visível no topo da Dashboard via badge verde brilhante `🔒 Licenciado (...)`. Ao clicar no badge, um popup interativo exibe o titular, setor, HWID e chave HMAC-SHA256.
-* **Fluxo para a Gestão do Sistema (`RezTermKeygen.exe`)**:
-  * Ferramenta privada executável geradora de chaves exclusiva da administração e time de engenharia. O executável oficial compilado (no pacote `RezTermKeygen.zip`) está disponível na pasta de ferramentas da gestão na raiz deste repositório privado.
-  * O administrador cola o HWID do colaborador, define o Nome/Setor do titular e seleciona o período de concessão (**30 Dias Experiência**, **180 Dias**, **365 Dias Anual** ou **Vitalício / Permanente**).
-  * O sistema gera a string assinada pronta para envio (ex: `REZ-PRO-20270706-8F9A-2B1C-4D5E-7A8B9C0D1E2F3A4B`).
+### 3.2 Live TCP/UDP Watcher
+* **Especificação Técnica**: Mapeamento em tempo real de conexões ativas e portas em escuta no sistema operacional Windows via chamadas nativas `GetExtendedTcpTable` e `GetExtendedUdpTable` (`IPHlpApi.dll`).
+* **Classificação de Endereçamento por RFC**:
+  * **RFC 1918**: Address Allocation for Private Internets (`10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`).
+  * **RFC 6598**: IANA-Reserved IPv4 Prefix for Shared Address Space / CGNAT (`100.64.0.0/10`).
+  * **RFC 3927**: Dynamic Configuration of IPv4 Link-Local Addresses / APIPA (`169.254.0.0/16`).
+  * **RFC 2544**: Benchmarking Methodology for Network Interconnect Devices (`198.18.0.0/15`).
+  * **RFC 5737**: IPv4 Address Blocks Reserved for Documentation / TEST-NET (`192.0.2.0/24`, `198.51.100.0/24`, `203.0.113.0/24`).
+  * **RFC 4291 / RFC 4193**: IPv6 Addressing Architecture e Unique Local IPv6 Unicast Addresses (`fc00::/7`, `fe80::/10`).
+* **Medição de Throughput**: Leitura contínua dos contadores de I/O de processos no kernel (`GetProcessIoCounters`) para exibir taxas de transferência reais (Mbps/Kbps) associadas a executáveis como `msedge.exe`, `chrome.exe`, `firefox.exe`.
 
----
+### 3.3 Web 360° Deep Forensics
+* **Especificação Técnica**: Analisador L3-L7 de ativos web. Realiza extração e dissecação de sub-recursos (JavaScript, CSS, Fontes, Imagens e Serviços de Anúncios) no DOM raiz.
+* **RFCs Relacionadas**:
+  * **RFC 8305**: Happy Eyeballs Version 2: Better Connections Through Dual-Stack-Capable Algorithms (avaliação de conectividade concorrente IPv4 vs IPv6 com cálculo de tempo de penalidade).
+  * **RFC 7230 / RFC 7540**: Hypertext Transfer Protocol (HTTP/1.1 e HTTP/2).
 
-## 4. Módulo Forense & Rastreio CGNAT (Graylog)
+### 3.4 Suíte SNMP Walker & MIB Browser AST
+* **Especificação Técnica**: Compilador ASN.1 em dois passes para arquivos MIB (SMIv1/SMIv2). Constrói a árvore sintática de OIDs, resolve nomes textuais (ex: `1.3.6.1.2.1.2.2.1.2` $\rightarrow$ `ifDescr`) e executa varreduras resilientes `WalkLoopResilient` com tratamento de falhas em switches/ONUs TP-Link, MikroTik, Cisco, Datacom, FiberHome e ZTE.
+* **Observabilidade**: Gerador automático de templates Zabbix 6.0/7.0 com Low-Level Discovery (LLD) e arquivos de configuração Prometheus `snmp_exporter` (`snmp.yml`).
+* **RFCs Relacionadas**:
+  * **RFC 1157**: Simple Network Management Protocol (SNMPv1).
+  * **RFC 1901 / RFC 1908**: Simple Network Management Protocol v2c (SNMPv2c).
+  * **RFC 3411 - RFC 3418**: SNMPv3 Framework, User-based Security Model (USM) e View-based Access Control Model (VACM).
+  * **RFC 1213 / RFC 2863**: Management Information Base for Network Management of TCP/IP-based internets (MIB-II) e The Interfaces Group MIB (IF-MIB).
 
-O RezTerm possui um motor de busca forense desenvolvido para investigação de conexões em servidores Graylog (v4.2.x e v5.x / OpenSearch) para automação de respostas a requisições judiciais e periciais de CGNAT Determinístico / Bulk Port Allocation (Cisco BPA - RFC 6598).
+### 3.5 Wireless RF Tests (Motor Fluke AirCheck)
+* **Especificação Técnica**: Telemetria e análise de espectro Wi-Fi baseada nas APIs nativas do Windows WLAN (`wlanapi.dll`).
+* **Inteligência MESH**: Algoritmo que agrupa e distingue nós cooperativos MESH (ex: TP-Link Deco, Google Wifi) de redes concorrentes operando no mesmo canal, prevenindo alarmes falsos de interferência co-canal (CCI).
+* **Padrões IEEE**: IEEE 802.11a/b/g/n/ac/ax/be, IEEE 802.11k/v/r (Fast Roaming e BSS Transition Management).
 
-### 4.1 Passo a Passo de Configuração de Servidores
+### 3.6 Ping & Trace Suite / MTR Avançado
+* **Especificação Técnica**: Utilitário de diagnóstico ICMP contínuo, cadeia multi-ping e MTR com heurística anti-CoPP (Control Plane Policing).
+* **RFCs Relacionadas**:
+  * **RFC 792**: Internet Control Message Protocol.
+  * **RFC 3393**: IP Packet Delay Variation Metric for IP Performance Metrics (Cálculo normalizado de Jitter).
 
-1. **Acessar o Módulo**: No menu lateral do RezTerm, selecione a aba **Graylog (CGNAT Forense)**.
-2. **Gerenciamento de Servidores**: Clique na opção **Gerenciar Servidores Graylog**.
-3. **Cadastrar Novo Cluster**: Clique em **Novo Servidor** e informe os parâmetros:
-   * **Nome Identificador**: Identificação técnica do nó (ex: `Cluster Graylog Core SP`).
-   * **Hostname ou IP**: Endereço FQDN ou IP do servidor.
-   * **Porta REST API**: Porta de comunicação (Padrão 9000 para HTTP ou 443 para HTTPS).
-   * **API Key / Token**: Token de API gerado no Graylog com permissão de leitura (`read:messages`). O token é armazenado no disco local com criptografia nativa **Windows DPAPI** (`DataProtectionScope.CurrentUser`).
-   * **Versão do Graylog**: Seleção entre `v4.x Legado` e `v5.x Moderno`.
-4. **Validação**: Clique em **Salvar**. O sistema executará um teste de conectividade REST e ativará o nó.
+### 3.7 Ethernet Tests L2
+* **Especificação Técnica**: Diagnóstico operando na Camada de Enlace de Dados. Escuta passiva de anúncios de infraestrutura (LLDP, CDP, MNDP) e testes ativos.
+* **Protocolos e Padrões**: IEEE 802.1Q (VLAN Tagging), IEEE 802.3 (Ethernet), RFC 2516 (PPPoE Specification), RFC 2131 (Dynamic Host Configuration Protocol - DHCP).
 
-### 4.2 Arquitetura da Consulta Forense e Otimização Lucene
-
-* **Cálculo Prévio de Bloco BPA (Cisco / NetFlow v9 IPFIX)**: Antes de submeter a requisição, o sistema calcula o início exato do bloco de portas ($\lfloor \text{porta} / 256 \rfloor \times 256$) e constrói a sintaxe Lucene estrita:
-  ```text
-  (nf_xlate_src_addr_ipv4: "45.237.200.240") AND (nf_postnatportblockstart: "64512" OR nf_xlate_src_port: "64616" OR nf_src_port: "64616")
-  ```
-  Isso transfere a filtragem para os índices do Elasticsearch/OpenSearch, evitando a exaustão do limite da API (`limit=1000`) em horários de pico.
-* **Discriminação de Eventos NAT (`nf_field_230`)**: Interpretação do campo de evento NetFlow v9 IPFIX (`1 = ALLOCATE / CREATE`, `2 = RELEASE / DELETE`), estabelecendo a linha do tempo exata de atribuição e liberação do bloco por assinante.
-* **Ordenação e Paginação REST**: Requisições ordenadas por `&sort=timestamp:asc` com paginação automática via `offset` para suporte a grandes volumes de dados.
-* **Laudos Técnicos (PDF & TXT)**: Geração de relatórios com hashes SHA-256 e enquadramento jurídico no Marco Civil da Internet (Lei 12.965/2014 - Art. 15) e LGPD (Lei 13.709/2018 - Art. 7º).
-
----
-
-## 🛡️ 5. Arquitetura de Segurança & Blindagem
-
-O RezTerm adota uma postura de segurança defensiva (*Security by Design*) em cada camada de software:
-
-1. **Compilação Blindada (*Single-File ReadyToRun Native*)**:
-   - Os executáveis de distribuição (`RezTerm.exe` e `RezTermSetup.exe`) são compilados no modo `PublishSingleFile` + `PublishReadyToRun`, gerando instruções de máquina pré-compiladas nativas (`win-x64`) com desativação total de símbolos de debug (`DebugSymbols=false`), dificultando ataques de engenharia reversa e decompilação via ILSpy/dnSpy.
-2. **Cofre Criptográfico DPAPI + HMAC-SHA256 (`HostStorageService`)**:
-   - Nenhuma senha de roteador, chave privada SSH ou token de API Graylog é gravada em texto plano.
-   - O sistema utiliza a **DPAPI (Data Protection API) do Windows** acoplada à conta do usuário de domínio em execução (`DataProtectionScope.CurrentUser`), reforçada com um código de autenticação de mensagem hash **HMAC-SHA256** para prevenir adulterações de arquivo no diretório local.
-3. **Observabilidade Blindada com Mascaramento (`RezLogger.cs`)**:
-   - Sistema de logging estruturado em JSON Lines (`.jsonl`) rotativo com expurgo automático após 14 dias.
-   - Antes de persistir qualquer exceção ou evento de auditoria no disco local, o logger executa varredura profunda de mascaramento (*Data Masking*), substituindo automaticamente senhas, tokens e chaves por `"***MASKED***"`.
+### 3.8 Rastreio Forense CGNAT (Graylog)
+* **Especificação Técnica**: Motor de busca forense integrado a clusters Graylog (REST API v4/v5) para localização de assinantes em blocos de portas compartilhados (Cisco Bulk Port Allocation - BPA).
+* **Conformidade Legal**: Emissão de laudos periciais com hash SHA-256 enquadrados no Marco Civil da Internet (Lei 12.965/2014, Art. 15) e LGPD (Lei 13.709/2018, Art. 7º).
+* **RFCs Relacionadas**:
+  * **RFC 6598**: IANA-Reserved IPv4 Prefix for Shared Address Space (Carrier-Grade NAT).
 
 ---
 
-## 🚀 6. Histórico de Evolução Arquitetural e Releases Especiais
+## 4. Comparativo de Engenharia: RezTerm vs Ferramentas de Mercado
 
-### 🚀 Release v2.2.8 (Padronização da Identidade Visual & Prolongamento Inteligente do Boot HUD)
-* **Padronização da Identidade Visual (`app_icon.jpg`)**: Sincronização da logo oficial da marca entre a inicialização WebView (`wwwroot/app_icon.jpg`), ícone nativo da janela WPF (`MainWindow.xaml`) e centro do reator ciano no HUD da tela de loading.
-* **Prolongamento Inteligente da Tela de Loading (`DashboardTab.razor`)**: O motor de interface agora assume e prolonga a exibição do HUD Cyberpunk de inicialização até que todas as 3 fases fundamentais de coleta e calibração (`Conectado / Varredura L2`, `Latência dos Radares de Ping` e `IP Público Externo`) estejam completas no `DashboardService`, impedindo a exibição de cards em *"Buscando..."* ou *"Testando..."* para o usuário.
-* **Transição Suave e Trava de Sessão Pós-Boot (`_hasCompletedSystemBoot`)**: Finalizada a coleta, o HUD executa uma animação de *fade-out* expansiva revelando o painel totalmente populado. Nas alternâncias posteriores entre guias (*Terminal SSH*, *ICMP Suite*, *Dashboard*), a navegação ocorre de forma 100% instantânea.
-
-### 🎯 Release v2.2.7 (Cálculo de Perda de Rota por Destino Final & Anti-CoPP Efetivo no MTR)
-* **Cálculo da Rota Exclusivo pelo Destino Final (`IcmpMenuTab.razor`)**: Em conformidade com a arquitetura de roteamento IP de operadoras e provedores de telecom, o cálculo de **Perda de Rota** e os contadores globais de **Enviados / Recebidos** no MTR Avançado passaram a ser 100% baseados na conectividade com o nó destino da rota (`destHop`). Se não houve perda de pacotes no destino final (ex: `8.8.8.8` respondendo `0.0%`), a rota inteira é classificada como saudável com `0.0% LOSS` e badge verde no card de métricas.
-* **Neutralização de Falsos Positivos de Drops Intermediários (CoPP Rate-Limit)**: Quando roteadores intermediários aplicam limitação de taxa de processamento ICMP no *Control Plane* (descartando pacotes ECHO dirigidos a eles ou suprimindo respostas `Time Exceeded`), esses descartes não somam mais perdas na porcentagem da rota nem nos cards gerais, sendo corretamente exibidos nas linhas individuais com a tag **`⚡ CoPP RATE-LIMIT`** (`0.0% (CoPP XX%)`).
-* **Relatório MTR Executivo Exportável**: O laudo gerado via botão `Copiar Relatório` foi alinhado ao cálculo final por destino, indicando explicitamente os nós intermediários em rate-limit como `0.0%(CoPP)`.
-
-### 🔗 Release v2.2.6 (Inteligência RF MESH / Repetidores, Zero Falsos Positivos & Laudo Enxuto)
-* **Reconhecimento Arquitetural MESH / Multi-AP (`ConnectedMeshOrSiblingNodes`)**: Em redes Wi-Fi empresariais ou residenciais estruturadas em malha (ex: **TP-Link Deco**, **Google Wifi**, **MikroTik Mesh**) ou repetidores sem cabo de rede, os satélites compartilham obrigatoriamente o mesmo SSID, Canal e Frequência do roteador principal para realizar o *Wireless Backhaul* e cobertura unificada. O algoritmo identifica automaticamente antenas que emitem o mesmo `Ssid` nominal da rede conectada, excluindo-as do cálculo de penalidade Co-Canal (`CCI`) e separando ruído de terceiros da cooperação legítima do fabricante.
-* **Score de Saúde de Canal Inteligente (`AnalyzeSpectrumAndChannels`)**: O motor passa a calcular a contenção de tempo de ar com base em **ESSIDs concorrentes reais (`distinctSsids.Count`)**. Malhas cooperativas multi-antena operando no mesmo canal não sofrem multas indevidas, exibindo a tag: `🟢 Topologia MESH / Multi-AP (Compartilhamento Legítimo de Canal)`.
-* **Modal Interativo Enxuto (`🚨 ABRIR LAUDO DE MELHORIAS (@conn.Ssid)`) & Topologia Multi-AP**: O botão de ação rápida foi otimizado para uma linguagem executiva direta. O laudo apresenta uma tabela de **Topologia MESH cooperativa**, listando o nó principal conectado (`⭐`) e cada satélite detetado (`🔗`) com seu BSSID, sinal (`RSSI`) e status `✔ Cooperação MESH (Backhaul/Extensão)`.
-
-### ⚡ Release v2.2.5 (Triagem Espectral & Auditoria IEEE Priorizada)
-* **Card Dedicado de Triagem da Conexão Ativa (`⚡ REDE CONECTADA EM AUDITORIA`)**: Posicionado no topo da aba de espectro passivo, exibe em tempo real o SSID conectado, canal, banda, sinal (`dBm`), qualidade, e contagens exatas de interferência **Co-Canal (`CCI`)** e **Adjacente (`ACI`)** geradas por vizinhos externos.
-* **Auditoria IEEE Priorizada (`AuditEngineeringStandards`)**: Ordena as recomendações de boas práticas para que as diretivas exclusivas da rede atualmente conectada (`⭐ REDE CONECTADA`) fiquem sempre em primeiro lugar.
-* **Responsividade Inteligente para Notebooks de 14" (`1366x768`)**: Grids flexíveis (`flex: 1; min-height: 0; overflow-y: auto; max-height: none !important;`) nas tabelas de telemetria contínua e canais, eliminando cortes ou rolagem dupla de tela.
-
-### 🖥️ Release v2.2.3 (Nome de Processo Oficial `RezTerm.exe` & Auto-Escala MTR)
-* **Processo Nativo `RezTerm.exe` no Gerenciador de Tarefas do Windows**: Compilação alinhada em `RezTerm.csproj` (`<AssemblyName>RezTerm</AssemblyName>`) e extração blindada em `RezTermSetup`, garantindo que o executável oficial em monitoramentos SOC/NOC e no Windows Task Manager se chame **`RezTerm.exe`**.
-* **Responsividade no MTR Avançado**: Painel superior multi-linha com auto-escalonamento para o campo de Destino (`min-width: 240px`).
-
-### 📊 Release v2.2.2 (Telemetria Nativa de RAM/GPU & Anti-CoPP Rate-Limit 3 Fases)
-* **Telemetria de Hardware Windows API (`GlobalMemoryStatusEx` & GPU Engine WMI)**: Captura exata do consumo de memória RAM do sistema sincronizada ao byte com o Gerenciador de Tarefas do Windows e HotFix universal de carga da GPU (`NVIDIA`, `Intel HD Graphics`, `AMD Radeon`), exibindo `0.0%` em repouso absoluto em vez de `N/A`.
-* **Motor Inteligente Anti-CoPP Rate-Limit em 3 Fases (TCP SYN Bypass)**: Conforme as normas **RFC 1812** (Sec 4.3.2.8) e **RFC 4443** (Sec 2.4), roteadores core de telecom e firewalls limitam a taxa de requisições ICMP para proteção da CPU do Plano de Controle (*Control Plane Policing - CoPP*). O RezTerm impede falsos positivos de queda por descarte ICMP aplicando:
-  1. **Heurística CoPP de Salto Intermediário vs Destino (`TracerouteService.cs`)**: Se um salto intermediário perde pacotes mas os saltos seguintes e o destino respondem com `0%` de perda, classifica como limitação CoPP (`⚡ CoPP RATE-LIMIT`).
-  2. **Poisson Random Jittering & Exponential Backoff Pacing**: Variação estocástica (`±15%` de jitter randômico) nos intervalos dos pacotes e recuo exponencial (`x1.4`) no caso de descarte para contornar *token buckets* de firewalls.
-  3. **TCP SYN Bypass (`PingService.cs` & `DashboardService.cs`)**: Se o ICMP for descartado em gateways ou alvos de monitoramento, dispara instantaneamente um handshake **TCP SYN/ACK em portas 80 HTTP ou 443 HTTPS**. Se responder, atesta que a via de dados (*Data Plane*) está 100% online com `Loss = 0%`, emitindo o selo azul neon **`⚡ CoPP BYPASS (TCP)`**.
+| Recurso / Arquitetura | RezTerm v3.4.3 | Wireshark | PuTTY / WinSCP | SolarWinds / PRTG | MTR / Ping |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Arquitetura de Execução** | ReadyToRun Native (.NET 10 + Blazor Hybrid) | Aplicação Qt/C++ Célula Única | Aplicação C Win32 Legada | Suíte Baseada em Servidor / Web | Utilitário CLI Monolítico |
+| **Varredura ICMP Massiva** | SIMD Parallel Channels (até 256 threads) | Não Aplicável | Não | Polling Agendado Lento | Não (Apenas Salto Único) |
+| **Auditoria Path MTU & MSS** | Amostragem Binária Ativa com Bit DF | Análise Passiva | Não | Não | Não |
+| **Geolocalização IP** | 100% Local-First (MemoryMappedFile) | Requer Plugins Externos | Não | Consulta Nuvem / Servidor | Não |
+| **Terminal SSH** | xterm.js GPU Direct + Debouncing 16ms | Não | Console Texto Padrão | Console Básico | Não |
+| **Segurança e Credenciais** | Criptografia Nativa DPAPI + HMAC-SHA256 | Arquivos Texto Claro | Registro Windows sem Criptografia | Banco de Dados Central | Não |
+| **Consumo de Memória / CPU** | Reduzido (Garbage Collector Server SIMD) | Elevado em Grandes PCAPs | Baixo | Elevado (Requer Servidor) | Baixo |
 
 ---
 
-## 📦 7. Instalação & Atualizações CDN Automáticas
+## 5. Sistema de Licenciamento Criptográfico (HWID & HMAC-SHA256)
 
-O RezTerm possui um assistente bootstrapper nativo (`RezTermSetup.exe`) que garante a instalação limpa, sem dependências externas de administração, diretamente no perfil do técnico (`%LocalAppData%\RezTerm`):
-* **Sincronização de Cache de Ícone**: O instalador força a atualização do cache gráfico do Shell do Windows (`SHChangeNotify`) garantindo que o novo ícone Cyberpunk seja exibido imediatamente na barra de tarefas e área de trabalho.
-* **Auto-Updater via GitHub CDN**: Ao abrir a ferramenta, o serviço `UpdateService` consulta anonimamente a API pública de lançamentos (`juniorespow/RezTerm-Downloads`). Caso uma nova versão esteja disponível, o analista recebe um alerta no topo da tela podendo baixar e aplicar a atualização em 1 clique sem interromper suas sessões.
+O **RezTerm** utiliza um mecanismo de licenciamento offline projetado para garantir o controle corporativo sem depender de servidores de autenticação externos:
+
+1. **Hardware ID (HWID)**: Identificador exclusivo de 12 caracteres derivado do `MachineGuid` do Windows e da assinatura de hardware (CPU e placa-mãe) via hash SHA-256.
+2. **Assinatura HMAC-SHA256**: As chaves de ativação são geradas com chave secreta mestre de 256 bits, validando o período de concessão e o titular. Qualquer modificação no arquivo local de licença resulta na invalidação imediata da sessão.
+
+---
+
+## 6. Requisitos de Sistema
+
+* **Sistema Operacional**: Windows 10 (64-bit) versão 1903 ou superior / Windows 11.
+* **Componente de Tempo de Execução**: Microsoft Edge WebView2 Runtime (pré-instalado no Windows 10/11).
+* **Biblioteca de Captura de Pacotes (Opcional)**: Npcap 1.70 ou superior (necessário apenas para captura bruta no Leitor PCAP e testes L2).
+* **Processador**: Intel Core i3 / AMD Ryzen 3 ou superior (com suporte a instruções AVX2 recomendado).
+* **Memória RAM**: Mínimo 4 GB RAM (Recomendado 8 GB).
 
 ---
 
-## 🛠️ 8. Setup do Ambiente de Desenvolvimento Local (Audicom Dev Team)
+## 7. Informações de Lançamento e Suporte
 
-Para os desenvolvedores e arquitetos do time de Engenharia de Redes que farão a manutenção, depuração ou compilação local do código-fonte, preparamos um pipeline automatizado de preparação do ambiente via PowerShell (`setup_dev_env.ps1`) e catálogo de extensões recomendadas para Visual Studio, VS Code e JetBrains Rider (`EXTENSOES_DEVS_AUDICOM.txt`).
+Desenvolvido por **Reginaldo Junior** para otimização das operações de engenharia de redes da **Audicom Telecom**.
 
-### 🚀 Automação em 1 Clique (`setup_dev_env.ps1`)
-Abra um terminal PowerShell (recomendado como Administrador) na raiz do repositório e execute:
-```powershell
-.\setup_dev_env.ps1
-```
-O script realizará automaticamente:
-1. **Verificação do `winget` (Windows Package Manager)** e de privilégios de execução no sistema.
-2. **Instalação / Atualização dos SDKs Core**: `.NET SDK 8.0/9.0/10.0`, `Git for Windows`, `Node.js LTS` e `Npcap Driver` (com suporte compatível a `WinPcap`).
-3. **Verificação de Workloads Desktop/Web**: Atualização dos motores `ManagedDesktop` e `NetWeb` (WPF e Blazor Hybrid/WebView2).
-4. **Verificação e Alinhamento de IDE**: Detecção inteligente do **Visual Studio 2022**, **JetBrains Rider** ou **Visual Studio Code / Cursor**.
-5. **Copia as bases de dados GeoIP offline (`GeoLite2-Country.mmdb`)** para `%LocalAppData%\RezTerm\GeoLite2` para que os testes de tráfego TCP/UDP e forense rodem imediatamente em modo local.
-6. **Executa `dotnet restore` e `dotnet build`** na solução para garantir que o projeto compile sem nenhum erro.
-
-### 💎 Configuração de IDE e Extensões
-* **[EXTENSOES_DEVS_AUDICOM.txt](file:///C:/Users/junio/source/repos/RezTerm/EXTENSOES_DEVS_AUDICOM.txt)**: Guia completo detalhando os workloads do Visual Studio 2022 (`ManagedDesktop`, `NetWeb`), extensões essenciais (`Roslynator`, `XAML Styler`, `SonarLint`, `Mermaid Editor`) e configuração no JetBrains Rider (`Heap Allocations Viewer`).
-* **[.vscode/extensions.json](file:///C:/Users/junio/source/repos/RezTerm/.vscode/extensions.json)**: Pré-configuração de workspace. Ao abrir a pasta no **VS Code** ou **Cursor AI**, a IDE recomendará automaticamente as extensões necessárias (`ms-dotnettools.csdevkit`, `bienode.mermaid-previewer`, `usernamehw.errorlens`, `aaron-bond.better-comments`, `esbenp.prettier-vscode`).
-
----
-<div align="center">
-<b>RezTerm Network Engineer Toolkit</b> • Engenharia Cibernética de Alta Performance • Reginaldo Junior
-</div>
+* **Repositório Público de Download**: [github.com/juniorespow/RezTerm-Downloads](https://github.com/juniorespow/RezTerm-Downloads)
+* **Licenciamento Corporativo**: Sujeito a concessão prévia de chave HWID pela administração de TI/NOC.
