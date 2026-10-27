@@ -1,4 +1,4 @@
-# RezTerm v3.4.3 (Cyberpunk Network Engineer Toolkit & Forensics Suite)
+# RezTerm v3.4.4 (Cyberpunk Network Engineer Toolkit & Forensics Suite)
 
 <div align="center">
 
@@ -9,7 +9,7 @@
 ![Security](https://img.shields.io/badge/Security-DPAPI%20%2B%20HMAC-00f0ff?style=for-the-badge)
 ![Hardware Acceleration](https://img.shields.io/badge/HW%20Acceleration-GPU%20%2B%20SIMD-00ff88?style=for-the-badge)
 
-Plataforma Unificada de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L2/L7 e Análise de Tráfego de Alta Performance — Compilada em **.NET 10.0 ReadyToRun WPF / Blazor Hybrid** com **Módulo ICMP Discovery & Path Audit (`v3.4.3`)**, **Live TCP/UDP Watcher Local-First (`v3.4.2`)**, **Atualização de Segurança SSH.NET (`v2026.0.0`)**, **Rastreio Forense CGNAT Graylog (`v3.4.1`)** e **Suíte de Temas Duplo (Dark Neon & Windows 11 Dark Fluent)**.
+Plataforma Unificada de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L2/L7 e Análise de Tráfego de Alta Performance — Compilada em **.NET 10.0 ReadyToRun WPF / Blazor Hybrid** com **Gestão & Ativação Online de Licenças Corporativas via RezServer (`v3.4.4`)**, **Medidor L4 RFC 6349 com Servidor Dedicado (`v3.4.4`)**, **Módulo ICMP Discovery & Path Audit (`v3.4.3`)**, **Live TCP/UDP Watcher Local-First (`v3.4.2`)** e **Suíte de Temas Duplo (Dark Neon & Windows 11 Dark Fluent)**.
 
 </div>
 
@@ -23,8 +23,11 @@ A arquitetura combina a capacidade de baixo nível do .NET 10 (acesso a sockets 
 
 ---
 
-## 2. Novidades & Otimizações — Versão v3.4.3 (Agosto / 2026)
+## 2. Novidades & Otimizações — Versão v3.4.4 (Outubro / 2026)
 
+* **Gestão & Ativação Online de Licenças Corporativas via RezServer (`v3.4.4`)**: Implementação do ciclo automatizado de solicitação e homologação remota de licenças corporativas. O cliente recém-instalado submete diretamente sua requisição informando nome, cargo e empresa. O RezServer armazena o pedido em banco SQLite (`license_requests`) e provê endpoint administrativo com interface Web no CGR para aprovação em 1 clique com vigência configurável (30 a 730 dias) e assinatura HMAC-SHA256 automática. O RezTerm executa polling periódico (3.5s) com animação neon e ativa/persiste a licença de forma transparente no endpoint local.
+* **Medidor de Vazão L4 RFC 6349 & Ecossistema RezServer (`v3.4.4`)**: Implementação de teste de vazão de camada de transporte L4 cliente/servidor com auditoria rigorosa de **Throughput Efetivo**, **Baseline RTT**, **Saturated RTT**, **Buffer Delay percentual**, **Transfer Time Ratio (TTR)** e **Eficiência TCP percentual** conforme a norma RFC 6349. Handshake criptográfico Zero-Cleartext com assinatura HMAC-SHA256, Nonces Anti-Replay e emissão de Tickets Efêmeros descartáveis (OTT). Infraestrutura soberana com servidor Linux Debian 12 dedicado em IPv4 público (`45.237.201.24`) e IPv6 estático (`2804:4ee4:ff00:3::11`), SSL ECDSA Let's Encrypt com renovação automática, roteamento canônico 301 para `rezserver.audicomtelecom.com.br`, ofuscação `Server: RezSecure` e geração pericial de laudo em PDF.
+* **Resiliência e Prevenção de Falhas de Interface (`v3.4.4`)**: Prevenção de bloqueios e travamentos no WebView2 por meio de `FileDialogHelper` assíncrono em thread STA dedicada para salvamento de laudos periciais, refinamento dos rótulos de latência e suporte dinâmico ao tema Windows 11 Dark Fluent.
 * **ICMP Network Discovery & Path Audit (`v3.4.3`)**: Submódulo avançado para varredura massiva paralela em sub-redes IPv4 baseada em `System.Threading.Channels` (suporte a até 256 threads simultâneas sem contenção de memória). Executa auditoria automática de **Path MTU (PMTU)** via varredura com bit DF (*DontFragment*) ativado em amostragem binária (1500 B a 1280 B), calcula o **MSS Estimado** ($\text{MTU} - 40$), estima a distância de saltos (**Hop Count**) via TTL de resposta ($64 - \text{TTL}$, $128 - \text{TTL}$, $255 - \text{TTL}$), realiza validação rigorosa de sintaxe CIDR (`IsValidIpv4Cidr`) com alerta informativo de formatação e permite exportação em 1-clique para laudos Markdown e relatórios CSV.
 * **Live TCP/UDP Watcher 100% Local-First (`v3.4.2`)**: Sistema de monitoramento de sockets abertos do Windows OS com resolução geográfica 100% offline via MaxMind GeoLite2 MMDB em memória mapeada (`MemoryMappedFile`), eliminando tráfego de fundo. Classifica automaticamente redes reservadas e privadas conforme as RFCs aplicáveis (RFC 1918, RFC 6598, RFC 3927, RFC 2544, RFC 5737, RFC 4291 e RFC 4193). Medição real de vazão por processo via P/Invoke nativo Kernel Win32 (`GetProcessIoCounters`).
 * **Resolução de Nomes & RFCs no NetOps & IRR (`v3.4.2`)**: Otimização no conector de consultas BGP para utilizar o primeiro IP utilizável do bloco (`.1`) em vez do IP de rede (`.0`), garantindo 100% de acurácia na geolocalização MaxMind e APIs remotas. Ocultamento de dados sensíveis de servidores RPKI (Routinator).
@@ -94,7 +97,7 @@ A arquitetura combina a capacidade de baixo nível do .NET 10 (acesso a sockets 
 
 ## 4. Comparativo de Engenharia: RezTerm vs Ferramentas de Mercado
 
-| Recurso / Arquitetura | RezTerm v3.4.3 | Wireshark | PuTTY / WinSCP | SolarWinds / PRTG | MTR / Ping |
+| Recurso / Arquitetura | RezTerm v3.4.4 | Wireshark | PuTTY / WinSCP | SolarWinds / PRTG | MTR / Ping |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Arquitetura de Execução** | ReadyToRun Native (.NET 10 + Blazor Hybrid) | Aplicação Qt/C++ Célula Única | Aplicação C Win32 Legada | Suíte Baseada em Servidor / Web | Utilitário CLI Monolítico |
 | **Varredura ICMP Massiva** | SIMD Parallel Channels (até 256 threads) | Não Aplicável | Não | Polling Agendado Lento | Não (Apenas Salto Único) |
