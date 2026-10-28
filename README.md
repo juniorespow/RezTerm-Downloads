@@ -1,4 +1,4 @@
-# RezTerm v3.4.4 (Cyberpunk Network Engineer Toolkit & Forensics Suite)
+# RezTerm v3.4.5 (Cyberpunk Network Engineer Toolkit & Forensics Suite)
 
 <div align="center">
 
@@ -9,7 +9,7 @@
 ![Security](https://img.shields.io/badge/Security-DPAPI%20%2B%20HMAC-00f0ff?style=for-the-badge)
 ![Hardware Acceleration](https://img.shields.io/badge/HW%20Acceleration-GPU%20%2B%20SIMD-00ff88?style=for-the-badge)
 
-Plataforma Unificada de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L2/L7 e Análise de Tráfego de Alta Performance — Compilada em **.NET 10.0 ReadyToRun WPF / Blazor Hybrid** com **Gestão & Ativação Online de Licenças Corporativas via RezServer (`v3.4.4`)**, **Medidor L4 RFC 6349 com Servidor Dedicado (`v3.4.4`)**, **Módulo ICMP Discovery & Path Audit (`v3.4.3`)**, **Live TCP/UDP Watcher Local-First (`v3.4.2`)** e **Suíte de Temas Duplo (Dark Neon & Windows 11 Dark Fluent)**.
+Plataforma Unificada de Diagnóstico de Redes, Auditoria Forense NOC/SOC, Triagem L2/L7 e Análise de Tráfego de Alta Performance — Compilada em **.NET 10.0 ReadyToRun WPF / Blazor Hybrid** com **Resiliência Multi-Endpoint & IPv4-First RezServer (`v3.4.5`)**, **Gestão & Ativação Online de Licenças Corporativas via RezServer (`v3.4.4`)**, **Medidor L4 RFC 6349 com Servidor Dedicado (`v3.4.4`)**, **Módulo ICMP Discovery & Path Audit (`v3.4.3`)**, **Live TCP/UDP Watcher Local-First (`v3.4.2`)** e **Suíte de Temas Duplo (Dark Neon & Windows 11 Dark Fluent)**.
 
 </div>
 
@@ -23,8 +23,14 @@ A arquitetura combina a capacidade de baixo nível do .NET 10 (acesso a sockets 
 
 ---
 
-## 2. Novidades & Otimizações — Versão v3.4.4 (Outubro / 2026)
+## 2. Novidades & Otimizações — Versão v3.4.5 (Outubro / 2026)
 
+* **Resiliência Multi-Endpoint e Resolução Dual-Stack IPv4/IPv6 no RezServer & RFC 6349 (`v3.4.5`)**:
+  - Implementação de ordenação estrita IPv4-First (Happy Eyeballs Invertido) no `RezHttpClientFactory` via `SocketsHttpHandler.ConnectCallback`, prevenindo blackholes e timeouts de 21 segundos de retransmissão SYN em clientes com conexões dual-stack e IPv6 inoperante na borda.
+  - Cascata multi-endpoint de alta disponibilidade com fallback transparente em `Rfc6349Service` e `LicensingService` (`https://rezserver.audicomtelecom.com.br`, `https://45.237.201.24`, `http://rezserver...`, `http://45.237.201.24`), com persistência em memória do último endpoint ativo.
+  - Elevação do timeout HTTP de 5s para 12s para garantir handshakes TLS e conexões em redes móveis de alta latência.
+  - Correção na interface `RezServerConfigSection` sincronizando a porta padrão `443` e flags `UseHttps`.
+  - Isenção de redirecionamentos canônicos 301 para endpoints REST `/api/` no daemon Debian `rezserverd.py` e emissão padronizada de cabeçalhos `Content-Length`, `Content-Type: application/json; charset=utf-8` e `Connection: close`, sanando encerramentos abruptos Schannel 56 no Windows.
 * **Gestão & Ativação Online de Licenças Corporativas via RezServer (`v3.4.4`)**: Implementação do ciclo automatizado de solicitação e homologação remota de licenças corporativas. O cliente recém-instalado submete diretamente sua requisição informando nome, cargo e empresa. O RezServer armazena o pedido em banco SQLite (`license_requests`) e provê endpoint administrativo com interface Web no CGR para aprovação em 1 clique com vigência configurável (30 a 730 dias) e assinatura HMAC-SHA256 automática. O RezTerm executa polling periódico (3.5s) com animação neon e ativa/persiste a licença de forma transparente no endpoint local.
 * **Medidor de Vazão L4 RFC 6349 & Ecossistema RezServer (`v3.4.4`)**: Implementação de teste de vazão de camada de transporte L4 cliente/servidor com auditoria rigorosa de **Throughput Efetivo**, **Baseline RTT**, **Saturated RTT**, **Buffer Delay percentual**, **Transfer Time Ratio (TTR)** e **Eficiência TCP percentual** conforme a norma RFC 6349. Handshake criptográfico Zero-Cleartext com assinatura HMAC-SHA256, Nonces Anti-Replay e emissão de Tickets Efêmeros descartáveis (OTT). Infraestrutura soberana com servidor Linux Debian 12 dedicado em IPv4 público (`45.237.201.24`) e IPv6 estático (`2804:4ee4:ff00:3::11`), SSL ECDSA Let's Encrypt com renovação automática, roteamento canônico 301 para `rezserver.audicomtelecom.com.br`, ofuscação `Server: RezSecure` e geração pericial de laudo em PDF.
 * **Resiliência e Prevenção de Falhas de Interface (`v3.4.4`)**: Prevenção de bloqueios e travamentos no WebView2 por meio de `FileDialogHelper` assíncrono em thread STA dedicada para salvamento de laudos periciais, refinamento dos rótulos de latência e suporte dinâmico ao tema Windows 11 Dark Fluent.
@@ -97,7 +103,7 @@ A arquitetura combina a capacidade de baixo nível do .NET 10 (acesso a sockets 
 
 ## 4. Comparativo de Engenharia: RezTerm vs Ferramentas de Mercado
 
-| Recurso / Arquitetura | RezTerm v3.4.4 | Wireshark | PuTTY / WinSCP | SolarWinds / PRTG | MTR / Ping |
+| Recurso / Arquitetura | RezTerm v3.4.5 | Wireshark | PuTTY / WinSCP | SolarWinds / PRTG | MTR / Ping |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Arquitetura de Execução** | ReadyToRun Native (.NET 10 + Blazor Hybrid) | Aplicação Qt/C++ Célula Única | Aplicação C Win32 Legada | Suíte Baseada em Servidor / Web | Utilitário CLI Monolítico |
 | **Varredura ICMP Massiva** | SIMD Parallel Channels (até 256 threads) | Não Aplicável | Não | Polling Agendado Lento | Não (Apenas Salto Único) |
